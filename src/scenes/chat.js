@@ -2,9 +2,10 @@ import { texts } from '../i18n.js'
 import gsap from 'gsap'
 
 export function renderChat(app, next) {
-  const messages = texts.chat.messages
-  const finalTop = texts.chat.finalTop
-  const finalBottom = texts.chat.finalBottom
+  const currentLang = window.__lang || 'es'
+  const messages = texts[currentLang].chat.messages
+  const finalTop = texts[currentLang].chat.finalTop
+  const finalBottom = texts[currentLang].chat.finalBottom
 
   app.innerHTML = `
     <main
@@ -79,7 +80,7 @@ export function renderChat(app, next) {
             color: #f5f1ea;
           "
         >
-          ${texts.bridge.hint}
+          ${texts[currentLang].bridge.hint}
         </p>
       </div>
     </main>

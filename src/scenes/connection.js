@@ -2,7 +2,8 @@ import gsap from 'gsap'
 import { texts } from '../i18n.js'
 
 export function renderConnection(app, next) {
-  const t = texts.connection
+  const currentLang = window.__lang || 'es'
+  const t = texts[currentLang].connection
 
   app.innerHTML = `
     <main
@@ -205,7 +206,7 @@ export function renderConnection(app, next) {
               pointer-events: none;
             "
           >
-            ${texts.bridge.hint}
+            ${texts[currentLang].bridge.hint}
           </p>
         </div>
       </div>

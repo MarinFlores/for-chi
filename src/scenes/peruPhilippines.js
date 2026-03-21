@@ -2,6 +2,7 @@ import { texts } from '../i18n.js'
 import gsap from 'gsap'
 
 export function renderPeruPhilippines(app, next) {
+  const currentLang = window.__lang || 'es'
   const {
     leftLabel,
     rightLabel,
@@ -9,7 +10,7 @@ export function renderPeruPhilippines(app, next) {
     rightText,
     finalTop,
     finalBottom
-  } = texts.peru
+  } = texts[currentLang].peru
 
   const finalWords = finalBottom
     .split(' ')
@@ -168,7 +169,7 @@ export function renderPeruPhilippines(app, next) {
             opacity: 0;
           "
         >
-          ${texts.bridge.hint}
+          ${texts[currentLang].bridge.hint}
         </p>
       </div>
     </main>

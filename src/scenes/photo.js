@@ -2,7 +2,8 @@ import gsap from 'gsap'
 import { texts } from '../i18n.js'
 
 export function renderPhoto(app, next) {
-  const t = texts.photo
+  const currentLang = window.__lang || 'es'
+  const t = texts[currentLang].photo
 
   app.innerHTML = `
     <main
@@ -137,7 +138,7 @@ export function renderPhoto(app, next) {
                 color: #f5f1ea;
               "
             >
-              ${texts.bridge.hint}
+              ${texts[currentLang].bridge.hint}
             </p>
           </div>
         </div>

@@ -2,24 +2,25 @@ import { texts } from '../i18n.js'
 import gsap from 'gsap'
 
 export function renderGate(app, next) {
+  const currentLang = window.__lang || 'es'
   app.innerHTML = `
     <main class="screen">
       <div class="content gate-card gate-animated">
         <div class="gate-glow"></div>
 
-        <p class="eyebrow">${texts.gate.eyebrow}</p>
-        <h1 class="main-text gate-title">${texts.gate.title}</h1>
-        <p class="sub-text">${texts.gate.subtitle}</p>
+        <p class="eyebrow">${texts[currentLang].gate.eyebrow}</p>
+        <h1 class="main-text gate-title">${texts[currentLang].gate.title}</h1>
+        <p class="sub-text">${texts[currentLang].gate.subtitle}</p>
 
         <form id="form" class="gate-form">
           <input
             id="input"
             class="secret-input"
-            placeholder=${texts.gate.placeholder}
+            placeholder=${texts[currentLang].gate.placeholder}
             autocomplete="off"
           />
           <button type="submit" class="enter-button gate-button">
-            ${texts.gate.button}
+            ${texts[currentLang].gate.button}
           </button>
         </form>
 
@@ -58,7 +59,7 @@ export function renderGate(app, next) {
       return
     }
 
-    error.textContent = texts.gate.error
+    error.textContent = texts[currentLang].gate.error
 
     gsap.fromTo(
       card,

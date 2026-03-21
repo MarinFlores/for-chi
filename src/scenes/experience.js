@@ -2,12 +2,13 @@ import { texts } from '../i18n.js'
 import gsap from 'gsap'
 
 export function renderBridge(app, next) {
+  const currentLang = window.__lang || 'es'
   app.innerHTML = `
     <main class="screen bridge-screen">
       <div class="content bridge-content">
-        <p class="eyebrow bridge-eyebrow">${texts.bridge.eyebrow}</p>
-        <h1 class="main-text bridge-title">${texts.bridge.title}</h1>
-        <p class="hint-text bridge-hint">${texts.bridge.hint}</p>
+        <p class="eyebrow bridge-eyebrow">${texts[currentLang].bridge.eyebrow}</p>
+        <h1 class="main-text bridge-title">${texts[currentLang].bridge.title}</h1>
+        <p class="hint-text bridge-hint">${texts[currentLang].bridge.hint}</p>
       </div>
     </main>
   `

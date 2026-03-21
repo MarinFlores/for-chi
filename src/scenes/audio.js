@@ -2,7 +2,8 @@ import gsap from 'gsap'
 import { texts } from '../i18n.js'
 
 export function renderAudio(app, next) {
-  const t = texts.audio
+  const currentLang = window.__lang || 'es'
+  const t = texts[currentLang].audio
 
   app.innerHTML = `
     <main
@@ -182,7 +183,7 @@ export function renderAudio(app, next) {
                 color: #f5f1ea;
               "
             >
-              ${texts.bridge.hint}
+              ${texts[currentLang].bridge.hint}
             </p>
           </div>
         </div>

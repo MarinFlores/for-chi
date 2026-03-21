@@ -8,6 +8,9 @@ import { renderPhoto } from './scenes/photo.js'
 import { renderConnection } from './scenes/connection.js'
 import { renderAudio } from './scenes/audio.js'
 import { renderFinal } from './scenes/final.js'
+import { renderLanguage } from './scenes/language.js'
+
+window.__lang = 'es'
 
 const music = new Audio('/assets/music.mp3')
 music.loop = true
@@ -84,4 +87,6 @@ function nextScene() {
   flow[currentScene](app, nextScene)
 }
 
-flow[currentScene](app, nextScene)
+renderLanguage(app, () => {
+  flow[currentScene](app, nextScene)
+})

@@ -135,6 +135,106 @@ export const content = {
       subtitle: 'because with you, everything started to feel different',
       hint: 'end',
       button: 'with you, again'
+    },
+
+    connection: {
+      part1: [
+        'talking with you…',
+        'never feels forced',
+        'never feels empty',
+        'even the smallest things',
+        'somehow matter'
+      ],
+      part2: [
+        'with you…',
+        'I don’t have to explain myself twice',
+        'you just get it'
+      ],
+      part3: [
+        'and then…',
+        'you started staying',
+        'more than I expected'
+      ]
+    }
+  },
+
+  ph: {
+    peru: {
+      leftLabel: 'Machy',
+      rightLabel: 'Chi',
+      leftText: 'habang nagsisimula pa lang ang araw ko...',
+      rightText: 'ikaw naman ay patapos na sa iyo',
+      finalTop: 'at kahit ganoon…',
+      finalBottom: 'lagi pa rin tayong nagtatagpo'
+    },
+
+    gate: {
+      eyebrow: 'para sa’yo lang',
+      title: 'ang salita...',
+      subtitle: 'yung ikaw lang ang gagamit',
+      button: 'pumasok',
+      error: 'hmm… subukan mo kung paano mo ako tatawagin',
+      placeholder: "..."
+    },
+
+    bridge: {
+      eyebrow: 'ikaw nga iyon',
+      title: 'alam kong ikaw iyon',
+      hint: 'ituloy'
+    },
+
+    chat: {
+      messages: [
+        { from: 'Chi', text: 'my Machy 🫶' },
+        { from: 'Machy', text: 'my Chi 🫶' },
+        { from: 'Chi', text: 'me haces sonreír 😊' },
+        { from: 'Machy', text: 'ikaw din, my Chi 😊' },
+        { from: 'Chi', text: 'ingat ka' },
+        { from: 'Machy', text: 'you too, my Chi' }
+      ],
+      finalTop: 'may mga simpleng usapan...',
+      finalBottom: 'na unti-unting nagiging mahalaga'
+    },
+
+    photo: {
+      top: 'hindi ko namalayan...',
+      bottom: 'naging bahagi ka na ng araw ko'
+    },
+
+    audio: {
+      intro: 'at pagkatapos, naroon ang boses mo...',
+      chiLabel: 'Chi',
+      machyLabel: 'Machy',
+      finalTop: 'at pagkatapos...',
+      finalBottom: 'nanatili rin sa akin ang boses mo'
+    },
+
+    final: {
+      top: 'para kay Chi',
+      title: 'ginawa ko ito para sa’yo',
+      subtitle: 'kasi sa’yo, naging iba ang pakiramdam ng lahat',
+      hint: 'wakas',
+      button: 'muli, kasama ka'
+    },
+
+    connection: {
+      part1: [
+        'makipag-usap sa’yo…',
+        'hindi kailanman pilit',
+        'hindi kailanman walang laman',
+        'kahit ang maliliit na bagay',
+        'kahit papaano ay mahalaga'
+      ],
+      part2: [
+        'sa’yo…',
+        'hindi ko kailangang ipaliwanag nang dalawang beses',
+        'naiintindihan mo agad'
+      ],
+      part3: [
+        'at pagkatapos…',
+        'unti-unti kang nananatili',
+        'higit pa sa inaasahan ko'
+      ]
     }
   }
 }

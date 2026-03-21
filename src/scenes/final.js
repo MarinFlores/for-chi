@@ -2,7 +2,8 @@ import gsap from 'gsap'
 import { texts } from '../i18n.js'
 
 export function renderFinal(app) {
-  const t = texts.final
+  const currentLang = window.__lang || 'es'
+  const t = texts[currentLang].final
 
   app.innerHTML = `
     <main
