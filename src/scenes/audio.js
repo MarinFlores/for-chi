@@ -354,10 +354,16 @@ export function renderAudio(app, next) {
 
   let leaving = false
 
-  app.addEventListener('click', (e) => {
+  app.addEventListener('pointerdown', (e) => {
     if (!finished || leaving) return
 
-    if (e.target.closest('.audio-control')) return
+    const path = e.composedPath ? e.composedPath() : []
+    const clickedAudio = path.some(el =>
+      el?.classList?.contains?.('audio-control') ||
+      el?.tagName === 'AUDIO'
+    )
+
+    if (clickedAudio) return
 
     leaving = true
 
