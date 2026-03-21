@@ -65,9 +65,8 @@ export function renderAudio(app, next) {
                 backdrop-filter: blur(6px);
                 -webkit-backdrop-filter: blur(6px);
                 opacity: 0;
-                transform: translateY(14px);
-                align-self: flex-start;
                 transform: translateY(10px);
+                align-self: flex-start;
               "
             >
               <p
@@ -107,9 +106,8 @@ export function renderAudio(app, next) {
                 backdrop-filter: blur(6px);
                 -webkit-backdrop-filter: blur(6px);
                 opacity: 0;
-                transform: translateY(14px);
-                align-self: flex-end;
                 transform: translateY(-10px);
+                align-self: flex-end;
               "
             >
               <p
@@ -202,6 +200,18 @@ export function renderAudio(app, next) {
   const chiAudio = document.querySelector('#chi-audio')
   const machyAudio = document.querySelector('#machy-audio')
 
+  const AUDIO_VOLUME = 0.4
+
+  function applyAudioVolume() {
+    chiAudio.volume = AUDIO_VOLUME
+    machyAudio.volume = AUDIO_VOLUME
+  }
+
+  applyAudioVolume()
+
+  chiAudio.addEventListener('loadedmetadata', applyAudioVolume)
+  machyAudio.addEventListener('loadedmetadata', applyAudioVolume)
+
   const music = window.__music
   const normalMusicVolume = 0.12
   const duckedMusicVolume = 0.05
@@ -240,7 +250,7 @@ export function renderAudio(app, next) {
         if (other !== audio) other.pause()
       })
 
-      audio.currentTime = audio.currentTime || 0
+      applyAudioVolume()
       fadeMusic(duckedMusicVolume, 450)
     })
 

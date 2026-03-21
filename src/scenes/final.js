@@ -87,6 +87,26 @@ export function renderFinal(app) {
           >
             ${t.hint}
           </p>
+
+          <button
+            id="restart-btn"
+            style="
+              margin-top: 28px;
+              padding: 10px 18px;
+              border-radius: 999px;
+              border: 1px solid rgba(255,255,255,0.2);
+              background: transparent;
+              color: #f5f1ea;
+              font-size: 0.8rem;
+              letter-spacing: 0.08em;
+              cursor: pointer;
+              opacity: 0;
+              transition: 0.3s;
+            "
+          >
+            ${t.button}
+          </button>
+
         </div>
       </div>
     </main>
@@ -94,8 +114,11 @@ export function renderFinal(app) {
 
   const copy = document.querySelector('#final-copy')
   const hint = document.querySelector('#final-hint')
+  const btn = document.querySelector('#restart-btn')
 
-  gsap.timeline()
+  const tl = gsap.timeline()
+
+  tl
     .to(copy, {
       opacity: 1,
       y: 0,
@@ -108,4 +131,29 @@ export function renderFinal(app) {
       duration: 0.5,
       ease: 'power2.out'
     }, '-=0.25')
+    .to(btn, {
+      opacity: 0.5,
+      duration: 0.4,
+      ease: 'power2.out'
+    }, '-=0.2')
+
+  btn.addEventListener('mouseenter', () => {
+    btn.style.opacity = '1'
+  })
+
+  btn.addEventListener('mouseleave', () => {
+    btn.style.opacity = '0.5'
+  })
+
+  btn.addEventListener('click', () => {
+    gsap.to(copy, {
+      opacity: 0,
+      y: -10,
+      duration: 0.4,
+      ease: 'power2.in',
+      onComplete: () => {
+        window.location.reload()
+      }
+    })
+  })
 }

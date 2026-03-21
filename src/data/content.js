@@ -53,7 +53,8 @@ export const content = {
       top: 'para chi',
       title: 'hice esto para ti',
       subtitle: 'porque contigo todo se fue sintiendo distinto',
-      hint: 'fin'
+      hint: 'fin',
+      button: 'otra vez contigo'
     }
   },
 
@@ -112,7 +113,8 @@ export const content = {
       top: 'for Chi',
       title: 'I made this for you',
       subtitle: 'because with you, everything started to feel different',
-      hint: 'end'
+      hint: 'end',
+      button: 'with you, again'
     }
   }
 }
