@@ -86,6 +86,7 @@ export function renderAudio(app, next) {
 
               <audio
                 id="chi-audio"
+                class="audio-control"
                 controls
                 preload="metadata"
                 style="
@@ -127,6 +128,7 @@ export function renderAudio(app, next) {
 
               <audio
                 id="machy-audio"
+                class="audio-control"
                 controls
                 preload="metadata"
                 style="
@@ -200,6 +202,22 @@ export function renderAudio(app, next) {
 
   const chiAudio = document.querySelector('#chi-audio')
   const machyAudio = document.querySelector('#machy-audio')
+
+  const audioElements = [chiAudio, machyAudio]
+
+  audioElements.forEach(audio => {
+    audio.addEventListener('click', (e) => {
+      e.stopPropagation()
+    })
+
+    audio.addEventListener('touchstart', (e) => {
+      e.stopPropagation()
+    }, { passive: true })
+
+    audio.addEventListener('play', (e) => {
+      e.stopPropagation()
+    })
+  })
 
   const AUDIO_VOLUME = 0.4
 
@@ -334,24 +352,26 @@ export function renderAudio(app, next) {
       ease: 'power2.out'
     }, '-=0.1')
 
-  app.addEventListener(
-    'click',
-    () => {
-      if (!finished) return
+  let leaving = false
 
-      chiAudio.pause()
-      machyAudio.pause()
-      fadeMusic(normalMusicVolume, 500)
+  app.addEventListener('click', (e) => {
+    if (!finished || leaving) return
 
-      gsap.to([intro, cards, copy], {
-        opacity: 0,
-        y: -10,
-        duration: 0.3,
-        ease: 'power2.in',
-        stagger: 0.03,
-        onComplete: next
-      })
-    },
-    { once: true }
-  )
+    if (e.target.closest('.audio-control')) return
+
+    leaving = true
+
+    chiAudio.pause()
+    machyAudio.pause()
+    fadeMusic(normalMusicVolume, 500)
+
+    gsap.to([intro, cards, copy], {
+      opacity: 0,
+      y: -10,
+      duration: 0.3,
+      ease: 'power2.in',
+      stagger: 0.03,
+      onComplete: next
+    })
+  })
 }
