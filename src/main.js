@@ -5,6 +5,7 @@ import { renderBridge } from './scenes/experience.js'
 import { renderPeruPhilippines } from './scenes/peruPhilippines.js'
 import { renderChat } from './scenes/chat.js'
 import { renderPhoto } from './scenes/photo.js'
+import { renderConnection } from './scenes/connection.js'
 import { renderAudio } from './scenes/audio.js'
 import { renderFinal } from './scenes/final.js'
 
@@ -70,6 +71,7 @@ const flow = [
   renderPeruPhilippines,
   renderChat,
   renderPhoto,
+  renderConnection,
   renderAudio,
   renderFinal
 ]

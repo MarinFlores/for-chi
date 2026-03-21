@@ -55,6 +55,26 @@ export const content = {
       subtitle: 'porque contigo todo se fue sintiendo distinto',
       hint: 'fin',
       button: 'otra vez contigo'
+    },
+
+    connection: {
+      part1: [
+        'hablar contigo…',
+        'nunca se siente forzado',
+        'nunca se siente vacío',
+        'incluso las cosas pequeñas',
+        'de alguna forma importan'
+      ],
+      part2: [
+        'contigo…',
+        'no tengo que explicarme dos veces',
+        'simplemente entiendes'
+      ],
+      part3: [
+        'y luego…',
+        'empiezas a quedarte',
+        'más de lo que esperaba'
+      ]
     }
   },
 
