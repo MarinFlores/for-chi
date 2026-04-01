@@ -9,6 +9,8 @@ import { renderConnection } from './scenes/connection.js'
 import { renderAudio } from './scenes/audio.js'
 import { renderFinal } from './scenes/final.js'
 import { renderLanguage } from './scenes/language.js'
+import { renderHug } from './scenes/hug.js'
+import { renderSecret } from './scenes/secret.js'
 
 window.__lang = 'es'
 
@@ -76,6 +78,7 @@ const flow = [
   renderPhoto,
   renderConnection,
   renderAudio,
+  renderHug,
   renderFinal
 ]
 

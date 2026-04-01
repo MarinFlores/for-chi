@@ -75,6 +75,19 @@ export const content = {
         'empiezas a quedarte',
         'más de lo que esperaba'
       ]
+    },
+    hug: {
+      top: 'algún día',
+      title: 'cuando por fin te vea',
+      subtitle: 'aunque ahora solo exista en mi imaginación, me gusta pensar en ese momento en el que por fin ya no haya distancia',
+      line: 'te abrazaré… y no te voy a soltar'
+    },
+    secret: {
+      top: 'solo para ti',
+      title: 'hay algo más',
+      subtitle: 'cuando por fin te tenga cerca, no voy a poder evitar acercarme un poquito más',
+      line: 'creo que no voy a poder evitar besarte',
+      highlight: 'besarte'
     }
   },
 
@@ -155,6 +168,19 @@ export const content = {
         'you started staying',
         'more than I expected'
       ]
+    },
+    hug: {
+      top: 'someday',
+      title: 'when I finally see you',
+      subtitle: 'even if right now it only exists in my imagination, I still love thinking about the moment when there is finally no distance left',
+      line: 'I’ll hug you… and I won’t let go'
+    },
+    secret: {
+      top: 'just for you',
+      title: 'there is something else',
+      subtitle: 'when I finally have you close, I won’t be able to stop myself from getting a little closer',
+      line: 'I think I won’t be able to stop myself from kissing you',
+      highlight: 'kissing you'
     }
   },
 
@@ -235,6 +261,19 @@ export const content = {
         'unti-unti kang nananatili',
         'higit pa sa inaasahan ko'
       ]
+    },
+    hug: {
+      top: 'balang araw',
+      title: 'kapag nakita na kita',
+      subtitle: 'kahit sa isip ko pa lang ito sa ngayon, gusto kong isipin ang sandaling wala nang distansya sa pagitan natin',
+      line: 'yayakapin kita… at hindi na kita bibitawan'
+    },
+    secret: {
+      top: 'para sa’yo lang',
+      title: 'may isa pa akong aaminin',
+      subtitle: 'kapag malapit na talaga kita, hindi ko mapipigilang lumapit pa nang kaunti',
+      line: 'pakiramdam ko hindi ko mapipigilang halikan ka',
+      highlight: 'halikan ka'
     }
   }
 }
