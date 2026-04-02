@@ -1,4 +1,5 @@
 import './style.css'
+import { inject } from '@vercel/analytics'
 
 import { renderGate } from './scenes/gate.js'
 import { renderBridge } from './scenes/experience.js'
@@ -11,6 +12,8 @@ import { renderFinal } from './scenes/final.js'
 import { renderLanguage } from './scenes/language.js'
 import { renderHug } from './scenes/hug.js'
 import { renderSecret } from './scenes/secret.js'
+
+inject()
 
 window.__lang = 'es'
 
