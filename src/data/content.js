@@ -88,6 +88,69 @@ export const content = {
       subtitle: 'cuando por fin te tenga cerca, no voy a poder evitar acercarme un poquito más',
       line: 'creo que no voy a poder evitar besarte',
       highlight: 'besarte'
+    },
+    songLanguage: {
+      top: 'y poco a poco…',
+      title: 'las canciones empezaron a decirlo por nosotros',
+      subtitle: 'sin explicarlo tanto, terminaban diciendo justo lo que sentíamos',
+      songs: [
+        {
+          platform: 'spotify',
+          title: 'I Think They Call This Love',
+          artist: 'Elliot James Reay',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #1d3d2f 0%, #0d1612 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: "I'm Yours",
+          artist: 'Jason Mraz',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #4a2b38 0%, #151015 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'Fall Into Me',
+          artist: 'Forest Blakk',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #5b4730 0%, #17120c 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'Blue',
+          artist: 'Yung Kai',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #2f3348 0%, #111319 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'I Wanna Be Yours',
+          artist: 'Artic Monkeys',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #2f4c52 0%, #0f1719 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'AMAZING',
+          artist: 'Rex Orange County',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #4e3a28 0%, #16110d 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'Sweater Weather',
+          artist: 'The Neighbourhood',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #3a314e 0%, #120f16 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'Could I Love You Any More',
+          artist: 'Reneé Dominique ft. Jason Mraz',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #30463d 0%, #101612 100%)'
+        }
+      ]
     }
   },
 
@@ -181,6 +244,69 @@ export const content = {
       subtitle: 'when I finally have you close, I won’t be able to stop myself from getting a little closer',
       line: 'I think I won’t be able to stop myself from kissing you',
       highlight: 'kissing you'
+    },
+    songLanguage: {
+      top: 'and little by little…',
+      title: 'the songs started saying it for us',
+      subtitle: 'without saying too much, they ended up expressing exactly what we felt',
+      songs: [
+        {
+          platform: 'spotify',
+          title: 'I Think They Call This Love',
+          artist: 'Elliot James Reay',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #1d3d2f 0%, #0d1612 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: "I'm Yours",
+          artist: 'Jason Mraz',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #4a2b38 0%, #151015 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'Fall Into Me',
+          artist: 'Forest Blakk',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #5b4730 0%, #17120c 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'Blue',
+          artist: 'Yung Kai',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #2f3348 0%, #111319 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'I Wanna Be Yours',
+          artist: 'Artic Monkeys',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #2f4c52 0%, #0f1719 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'AMAZING',
+          artist: 'Rex Orange County',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #4e3a28 0%, #16110d 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'Sweater Weather',
+          artist: 'The Neighbourhood',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #3a314e 0%, #120f16 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'Could I Love You Any More',
+          artist: 'Reneé Dominique ft. Jason Mraz',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #30463d 0%, #101612 100%)'
+        }
+      ]
     }
   },
 
@@ -274,6 +400,69 @@ export const content = {
       subtitle: 'kapag malapit na talaga kita, hindi ko mapipigilang lumapit pa nang kaunti',
       line: 'pakiramdam ko hindi ko mapipigilang halikan ka',
       highlight: 'halikan ka'
-    }
+    },
+    songLanguage: {
+      top: 'at unti-unti…',
+      title: 'ang mga kanta ang nagsimulang magsabi para sa atin',
+      subtitle: 'nang hindi na kailangang magpaliwanag, nasabi nila mismo ang nararamdaman natin',
+      songs: [
+        {
+          platform: 'spotify',
+          title: 'I Think They Call This Love',
+          artist: 'Elliot James Reay',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #1d3d2f 0%, #0d1612 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: "I'm Yours",
+          artist: 'Jason Mraz',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #4a2b38 0%, #151015 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'Fall Into Me',
+          artist: 'Forest Blakk',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #5b4730 0%, #17120c 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'Blue',
+          artist: 'Yung Kai',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #2f3348 0%, #111319 100%)'
+        },
+        {
+          platform: 'spotify',
+          title: 'I Wanna Be Yours',
+          artist: 'Artic Monkeys',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #2f4c52 0%, #0f1719 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'AMAZING',
+          artist: 'Rex Orange County',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #4e3a28 0%, #16110d 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'Sweater Weather',
+          artist: 'The Neighbourhood',
+          sent: 'Machy',
+          gradient: 'linear-gradient(135deg, #3a314e 0%, #120f16 100%)'
+        },
+        {
+          platform: 'youtube',
+          title: 'Could I Love You Any More',
+          artist: 'Reneé Dominique ft. Jason Mraz',
+          sent: 'Chi',
+          gradient: 'linear-gradient(135deg, #30463d 0%, #101612 100%)'
+        }
+      ]
+    },
   }
 }

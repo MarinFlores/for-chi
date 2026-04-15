@@ -11,7 +11,7 @@ import { renderAudio } from './scenes/audio.js'
 import { renderFinal } from './scenes/final.js'
 import { renderLanguage } from './scenes/language.js'
 import { renderHug } from './scenes/hug.js'
-import { renderSecret } from './scenes/secret.js'
+import { renderSongLanguage } from "./scenes/songLanguage";
 
 inject()
 
@@ -80,6 +80,7 @@ const flow = [
   renderChat,
   renderPhoto,
   renderConnection,
+  renderSongLanguage,
   renderAudio,
   renderHug,
   renderFinal
