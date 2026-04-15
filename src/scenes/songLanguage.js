@@ -1,5 +1,6 @@
 import gsap from 'gsap'
 import { texts } from '../i18n.js'
+import { showSongSecret } from './songSecret.js'
 
 export function renderSongLanguage(app, next) {
   const currentLang = window.__lang || 'es'
@@ -37,6 +38,10 @@ export function renderSongLanguage(app, next) {
       return `
         <div
           class="song-card"
+          data-index="${index}"
+          data-top="${pos.top}"
+          data-left="${pos.left}"
+          data-rotate="${pos.rotate}"
           style="
             position: absolute;
             width: min(165px, 20vw);
@@ -52,6 +57,11 @@ export function renderSongLanguage(app, next) {
             box-shadow: 0 20px 60px rgba(0,0,0,0.28);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: none;
+            cursor: pointer;
+            z-index: 4;
           "
         >
           <div
@@ -137,6 +147,7 @@ export function renderSongLanguage(app, next) {
 
   app.innerHTML = `
     <main
+      id="song-language-scene"
       style="
         position: relative;
         width: 100%;
@@ -155,20 +166,12 @@ export function renderSongLanguage(app, next) {
       ></div>
 
       <div
-        id="songs-bg"
-        style="
-          position: absolute;
-          inset: 0;
-        "
-      >
-        ${songs}
-      </div>
-
-      <div
         id="songs-overlay"
         style="
           position: absolute;
           inset: 0;
+          z-index: 2;
+          pointer-events: none;
           background:
             linear-gradient(to bottom, rgba(0,0,0,0.42), rgba(0,0,0,0.18) 25%, rgba(0,0,0,0.42));
         "
@@ -178,7 +181,7 @@ export function renderSongLanguage(app, next) {
         id="songs-stage"
         style="
           position: relative;
-          z-index: 2;
+          z-index: 3;
           width: 100%;
           height: 100%;
           display: flex;
@@ -186,6 +189,7 @@ export function renderSongLanguage(app, next) {
           justify-content: center;
           text-align: center;
           padding: 24px;
+          pointer-events: none;
         "
       >
         <div
@@ -256,10 +260,22 @@ export function renderSongLanguage(app, next) {
           </p>
         </div>
       </div>
+
+      <div
+        id="songs-bg"
+        style="
+          position: absolute;
+          inset: 0;
+          z-index: 4;
+        "
+      >
+        ${songs}
+      </div>
     </main>
   `
 
-  const cards = app.querySelectorAll('.song-card')
+  const scene = app.querySelector('#song-language-scene')
+  const cards = Array.from(app.querySelectorAll('.song-card'))
   const top = app.querySelector('#songs-top')
   const title = app.querySelector('#songs-title')
   const sub = app.querySelector('#songs-sub')
@@ -267,18 +283,22 @@ export function renderSongLanguage(app, next) {
 
   let finished = false
   let leaving = false
+  let secretOpen = false
+  let pressTimer = null
+  let longPressTriggered = false
 
-  const tl = gsap.timeline({
+  const entrance = gsap.timeline({
     onComplete: () => {
       finished = true
     }
   })
 
-  tl.to(top, {
-    opacity: 0.58,
-    duration: 0.5,
-    ease: 'power2.out'
-  })
+  entrance
+    .to(top, {
+      opacity: 0.58,
+      duration: 0.5,
+      ease: 'power2.out'
+    })
     .to(title, {
       opacity: 1,
       y: 0,
@@ -311,8 +331,63 @@ export function renderSongLanguage(app, next) {
       ease: 'power2.out'
     }, '-=0.3')
 
-  app.addEventListener('click', () => {
-    if (!finished || leaving) return
+  function clearPressTimer() {
+    if (pressTimer) {
+      clearTimeout(pressTimer)
+      pressTimer = null
+    }
+  }
+
+  cards.forEach(card => {
+    const startPress = (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+
+      if (!finished || leaving || secretOpen) return
+
+      longPressTriggered = false
+      clearPressTimer()
+
+      pressTimer = setTimeout(() => {
+        longPressTriggered = true
+        secretOpen = true
+
+        showSongSecret(
+          scene,
+          cards,
+          [top, title, sub, hint],
+          () => {
+            secretOpen = false
+            setTimeout(() => {
+              longPressTriggered = false
+            }, 60)
+          }
+        )
+      }, 3000)
+    }
+
+    const cancelPress = (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      clearPressTimer()
+    }
+
+    const stopClick = (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+    }
+
+    card.addEventListener('pointerdown', startPress)
+    card.addEventListener('pointerup', cancelPress)
+    card.addEventListener('pointerleave', cancelPress)
+    card.addEventListener('pointercancel', cancelPress)
+    card.addEventListener('click', stopClick)
+  })
+
+  scene.addEventListener('click', (e) => {
+    if (!finished || leaving || secretOpen || longPressTriggered) return
+
+    if (e.target.closest('.song-card')) return
 
     leaving = true
 

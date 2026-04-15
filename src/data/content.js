@@ -93,6 +93,12 @@ export const content = {
       top: 'y poco a poco…',
       title: 'las canciones empezaron a decirlo por nosotros',
       subtitle: 'sin explicarlo tanto, terminaban diciendo justo lo que sentíamos',
+      secret: {
+        line1: 'nuestro lenguaje del amor',
+        line2: 'todo me suena a ti',
+        sign: 'M × C',
+        symbol: '♡'
+      },
       songs: [
         {
           platform: 'spotify',
@@ -249,6 +255,12 @@ export const content = {
       top: 'and little by little…',
       title: 'the songs started saying it for us',
       subtitle: 'without saying too much, they ended up expressing exactly what we felt',
+      secret: {
+        line1: 'our love language',
+        line2: 'everything reminds me of you',
+        sign: 'M × C',
+        symbol: '♡'
+      },
       songs: [
         {
           platform: 'spotify',
@@ -405,6 +417,12 @@ export const content = {
       top: 'at unti-unti…',
       title: 'ang mga kanta ang nagsimulang magsabi para sa atin',
       subtitle: 'nang hindi na kailangang magpaliwanag, nasabi nila mismo ang nararamdaman natin',
+      secret: {
+        line1: 'paraan natin ng pagmamahal',
+        line2: 'lahat ng bagay ay nagpapaalala sa’yo',
+        sign: 'M × C',
+        symbol: '♡'
+      },
       songs: [
         {
           platform: 'spotify',

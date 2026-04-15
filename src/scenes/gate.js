@@ -29,7 +29,7 @@ export function renderGate(app, next) {
     </main>
   `
 
-  const valid = ['mymachy', 'my machy', 'machy']
+  const valid = ['mymachy', 'my machy', 'machy', 'mychi', 'my chi', 'chi']
   const form = document.querySelector('#form')
   const input = document.querySelector('#input')
   const error = document.querySelector('#error')
