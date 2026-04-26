@@ -157,6 +157,20 @@ export const content = {
           gradient: 'linear-gradient(135deg, #30463d 0%, #101612 100%)'
         }
       ]
+    },
+    officialDay: {
+      top: '26 de abril de 2026',
+      title: 'nuestro día',
+      subtitle: 'lo que veníamos construyendo, hoy tiene un lugar en nuestra historia',
+      month: 'abril 2026',
+      weekdays: ['L', 'M', 'M', 'J', 'V', 'S', 'D'],
+      counterLabel: 'desde que somos nosotros',
+      days: 'días',
+      hours: 'horas',
+      minutes: 'min',
+      seconds: 'seg',
+      line: 'no importa la distancia, desde hoy hay una fecha que también nos pertenece',
+      hint: 'sigue'
     }
   },
 

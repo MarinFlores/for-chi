@@ -12,6 +12,7 @@ import { renderFinal } from './scenes/final.js'
 import { renderLanguage } from './scenes/language.js'
 import { renderHug } from './scenes/hug.js'
 import { renderSongLanguage } from "./scenes/songLanguage";
+import { renderOfficialDay } from './scenes/officialDay.js'
 
 inject()
 
@@ -83,6 +84,7 @@ const flow = [
   renderSongLanguage,
   renderAudio,
   renderHug,
+  renderOfficialDay,
   renderFinal
 ]
 
