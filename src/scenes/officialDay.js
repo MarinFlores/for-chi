@@ -1,6 +1,8 @@
 import gsap from 'gsap'
 import { texts } from '../i18n.js'
 
+const officialMoment = '/assets/official-moment.png'
+
 function getSinceDate() {
   return new Date('2026-04-26T00:00:00')
 }
@@ -85,7 +87,7 @@ export function renderOfficialDay(app, next) {
         <p
           style="
             margin: 18px auto 30px;
-            max-width: 28ch;
+            max-width: 34ch;
             font-size: clamp(1rem, 2vw, 1.28rem);
             line-height: 1.45;
             opacity: 0.72;
@@ -150,6 +152,7 @@ export function renderOfficialDay(app, next) {
 
               return `
                 <span
+                  class="${isSpecial ? 'official-day-secret' : ''}"
                   style="
                     height: 34px;
                     display: flex;
@@ -160,6 +163,7 @@ export function renderOfficialDay(app, next) {
                     background: ${isSpecial ? 'rgba(255,255,255,0.16)' : 'transparent'};
                     box-shadow: ${isSpecial ? '0 0 28px rgba(255,255,255,0.16)' : 'none'};
                     transform: ${isSpecial ? 'scale(1.08)' : 'scale(1)'};
+                    cursor: ${isSpecial ? 'pointer' : 'default'};
                   "
                 >
                   ${day}
@@ -202,7 +206,7 @@ export function renderOfficialDay(app, next) {
           id="official-line"
           style="
             margin: 30px auto 0;
-            max-width: 28ch;
+            max-width: 30ch;
             font-size: clamp(1rem, 2vw, 1.24rem);
             line-height: 1.45;
             opacity: 0;
@@ -225,15 +229,90 @@ export function renderOfficialDay(app, next) {
         >
           ${t.hint}
         </p>
+
+        <div
+          id="official-secret"
+          style="
+            position: fixed;
+            inset: 0;
+            z-index: 20;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 22px;
+            background: rgba(0,0,0,0.72);
+            backdrop-filter: blur(14px);
+          "
+        >
+          <div
+            id="official-secret-card"
+            style="
+              width: min(560px, 90vw);
+              opacity: 0;
+              transform: translateY(18px) scale(0.96);
+            "
+          >
+            <div
+              style="
+                position: relative;
+                border-radius: 24px;
+                overflow: hidden;
+                background: rgba(255,255,255,0.045);
+                box-shadow: 0 30px 100px rgba(0,0,0,0.42);
+              "
+            >
+              <img
+                src="${officialMoment}"
+                alt="our moment"
+                style="
+                  width: 100%;
+                  max-height: 54vh;
+                  display: block;
+                  object-fit: contain;
+                  filter: blur(1.2px) brightness(0.72) contrast(0.96) saturate(0.92);
+                "
+              />
+
+              <div
+                style="
+                  position: absolute;
+                  inset: 0;
+                  background:
+                    linear-gradient(to bottom, rgba(0,0,0,0.04), rgba(0,0,0,0.26)),
+                    radial-gradient(circle at 50% 45%, transparent 42%, rgba(0,0,0,0.28));
+                  pointer-events: none;
+                "
+              ></div>
+            </div>
+
+            <div style="margin-top: 18px; color: #f5f1ea; text-align: center;">
+              <p style="margin: 0; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.42;">
+                ${t.secret.time}
+              </p>
+
+              <p style="margin: 12px auto 0; max-width: 34ch; font-size: clamp(0.95rem, 2vw, 1.08rem); line-height: 1.45; opacity: 0.82;">
+                ${t.secret.title}
+              </p>
+
+              <p style="margin: 8px auto 0; max-width: 32ch; font-size: 0.86rem; line-height: 1.45; opacity: 0.48;">
+                ${t.secret.subtitle}
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   `
 
-  const bg = document.querySelector('#official-bg')
-  const card = document.querySelector('#official-card')
-  const line = document.querySelector('#official-line')
-  const hint = document.querySelector('#official-hint')
-  const counterValue = document.querySelector('#counter-value')
+  const bg = app.querySelector('#official-bg')
+  const card = app.querySelector('#official-card')
+  const line = app.querySelector('#official-line')
+  const hint = app.querySelector('#official-hint')
+  const counterValue = app.querySelector('#counter-value')
+
+  const secretDay = app.querySelector('.official-day-secret')
+  const secret = app.querySelector('#official-secret')
+  const secretCard = app.querySelector('#official-secret-card')
 
   function updateCounter() {
     const { days, hours, minutes, seconds } = getElapsedParts()
@@ -243,9 +322,7 @@ export function renderOfficialDay(app, next) {
   updateCounter()
   const interval = setInterval(updateCounter, 1000)
 
-  const tl = gsap.timeline()
-
-  tl
+  gsap.timeline()
     .to(bg, {
       opacity: 1,
       duration: 1.2,
@@ -268,6 +345,35 @@ export function renderOfficialDay(app, next) {
       duration: 0.45,
       ease: 'power2.out'
     }, '-=0.1')
+
+  secretDay?.addEventListener('click', (event) => {
+    event.stopPropagation()
+
+    secret.style.display = 'flex'
+
+    gsap.to(secretCard, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 0.55,
+      ease: 'power3.out'
+    })
+  })
+
+  secret?.addEventListener('click', (event) => {
+    event.stopPropagation()
+
+    gsap.to(secretCard, {
+      opacity: 0,
+      y: 18,
+      scale: 0.96,
+      duration: 0.3,
+      ease: 'power2.in',
+      onComplete: () => {
+        secret.style.display = 'none'
+      }
+    })
+  })
 
   app.addEventListener('click', () => {
     clearInterval(interval)

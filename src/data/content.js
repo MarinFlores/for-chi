@@ -170,7 +170,12 @@ export const content = {
       minutes: 'min',
       seconds: 'seg',
       line: 'no importa la distancia, desde hoy hay una fecha que también nos pertenece',
-      hint: 'sigue'
+      hint: 'sigue',
+      secret: {
+        time: 'para mí era de mañana · para ti de noche',
+        title: 'el momento en que me tomaste por sorpresa',
+        subtitle: 'me dejaste sin palabras y me gustó demasiado'
+      }
     }
   },
 
@@ -333,6 +338,25 @@ export const content = {
           gradient: 'linear-gradient(135deg, #30463d 0%, #101612 100%)'
         }
       ]
+    },
+    officialDay: {
+      top: 'April 26, 2026',
+      title: 'our day',
+      subtitle: 'what we had been building now has a place in our story',
+      month: 'april 2026',
+      weekdays: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+      counterLabel: 'since we became us',
+      days: 'days',
+      hours: 'hours',
+      minutes: 'min',
+      seconds: 'sec',
+      line: 'distance does not matter, from today there is a date that belongs to us too',
+      hint: 'continue',
+      secret: {
+        time: 'it was morning for me · night for you',
+        title: 'the moment you surprised me',
+        subtitle: 'you left me speechless and I liked it a lot'
+      }
     }
   },
 
@@ -496,5 +520,24 @@ export const content = {
         }
       ]
     },
+    officialDay: {
+      top: 'Abril 26, 2026',
+      title: 'ang araw natin',
+      subtitle: 'ang matagal na nating binubuo, ngayon ay may lugar na sa ating kwento',
+      month: 'abril 2026',
+      weekdays: ['L', 'M', 'M', 'H', 'B', 'S', 'L'],
+      counterLabel: 'mula nang tayo ay maging tayo',
+      days: 'araw',
+      hours: 'oras',
+      minutes: 'min',
+      seconds: 'seg',
+      line: 'kahit may distansya, mula ngayon may petsa na para sa atin',
+      hint: 'magpatuloy',
+      secret: {
+        time: 'umaga para sa akin · gabi para sa’yo',
+        title: 'ang sandaling ginulat mo ako',
+        subtitle: 'napatahimik mo ako… at sobra kong nagustuhan'
+      }
+    }
   }
 }
