@@ -146,30 +146,33 @@ export function renderOfficialDay(app, next) {
               font-size: 0.9rem;
             "
           >
-            ${Array.from({ length: 30 }, (_, i) => {
-              const day = i + 1
-              const isSpecial = day === 26
-
-              return `
-                <span
-                  class="${isSpecial ? 'official-day-secret' : ''}"
-                  style="
-                    height: 34px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 999px;
-                    opacity: ${isSpecial ? '1' : '0.42'};
-                    background: ${isSpecial ? 'rgba(255,255,255,0.16)' : 'transparent'};
-                    box-shadow: ${isSpecial ? '0 0 28px rgba(255,255,255,0.16)' : 'none'};
-                    transform: ${isSpecial ? 'scale(1.08)' : 'scale(1)'};
-                    cursor: ${isSpecial ? 'pointer' : 'default'};
-                  "
-                >
-                  ${day}
-                </span>
-              `
-            }).join('')}
+            ${[
+              '<span></span>',
+              '<span></span>',
+              ...Array.from({ length: 30 }, (_, i) => {
+                const day = i + 1
+                const isSpecial = day === 26
+                return `
+                  <span
+                    class="${isSpecial ? 'official-day-secret' : ''}"
+                    style="
+                      height: 34px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      border-radius: 999px;
+                      opacity: ${isSpecial ? '1' : '0.42'};
+                      background: ${isSpecial ? 'rgba(255,255,255,0.16)' : 'transparent'};
+                      box-shadow: ${isSpecial ? '0 0 28px rgba(255,255,255,0.16)' : 'none'};
+                      transform: ${isSpecial ? 'scale(1.08)' : 'scale(1)'};
+                      cursor: ${isSpecial ? 'pointer' : 'default'};
+                    "
+                  >
+                    ${day}
+                  </span>
+                `
+              })
+            ].join('')}
           </div>
         </div>
 
