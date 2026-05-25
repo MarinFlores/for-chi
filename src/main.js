@@ -2,6 +2,8 @@ import './style.css'
 import { inject } from '@vercel/analytics'
 
 import { renderGate } from './scenes/gate.js'
+import { renderStoryHub } from './scenes/storyHub.js'
+
 import { renderBridge } from './scenes/experience.js'
 import { renderPeruPhilippines } from './scenes/peruPhilippines.js'
 import { renderChat } from './scenes/chat.js'
@@ -11,8 +13,12 @@ import { renderAudio } from './scenes/audio.js'
 import { renderFinal } from './scenes/final.js'
 import { renderLanguage } from './scenes/language.js'
 import { renderHug } from './scenes/hug.js'
-import { renderSongLanguage } from "./scenes/songLanguage";
+import { renderSongLanguage } from './scenes/songLanguage.js'
 import { renderOfficialDay } from './scenes/officialDay.js'
+
+import { renderMonthOneIntro } from './months/month1/monthOneIntro.js'
+import { renderMonthLetter } from './months/month1/monthLetter.js'
+import { renderMonthFinal } from './months/month1/monthFinal.js'
 
 inject()
 
@@ -73,9 +79,9 @@ btn.addEventListener('click', () => {
 })
 
 let currentScene = 0
+let activeFlow = []
 
-const flow = [
-  renderGate,
+const legacyFlow = [
   renderBridge,
   renderPeruPhilippines,
   renderChat,
@@ -88,14 +94,39 @@ const flow = [
   renderFinal
 ]
 
+const monthOneFlow = [
+  renderMonthOneIntro,
+  renderMonthLetter,
+  renderMonthFinal
+]
+
+function startFlow(flow) {
+  activeFlow = flow
+  currentScene = 0
+
+  activeFlow[currentScene](app, nextScene, startExperience, openMonth)
+}
+
+function openMonth(id) {
+  if (id === 'month-1') {
+    startFlow(monthOneFlow)
+  }
+}
+
+function startExperience() {
+  startFlow(legacyFlow)
+}
+
 function nextScene() {
   currentScene++
 
-  if (currentScene >= flow.length) return
+  if (currentScene >= activeFlow.length) return
 
-  flow[currentScene](app, nextScene)
+  activeFlow[currentScene](app, nextScene, startExperience, openMonth)
 }
 
 renderLanguage(app, () => {
-  flow[currentScene](app, nextScene)
+  renderGate(app, () => {
+    renderStoryHub(app, openMonth, startExperience)
+  })
 })
