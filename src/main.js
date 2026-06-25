@@ -20,6 +20,13 @@ import { renderMonthOneIntro } from './months/month1/monthOneIntro.js'
 import { renderMonthLetter } from './months/month1/monthLetter.js'
 import { renderMonthFinal } from './months/month1/monthFinal.js'
 
+import { renderMonthTwoIntro } from './months/month2/monthTwoIntro.js'
+import { renderMonthTwoAlbum } from './months/month2/monthTwoAlbum.js'
+import { renderMonthTwoBirthday } from './months/month2/monthTwoBirthday.js'
+import { renderMonthTwoGallery } from './months/month2/monthTwoGallery.js'
+import { renderMonthTwoLetter } from './months/month2/monthTwoLetter.js'
+import { renderMonthTwoFinal } from './months/month2/monthTwoFinal.js'
+
 inject()
 
 window.__lang = 'es'
@@ -100,6 +107,15 @@ const monthOneFlow = [
   renderMonthFinal
 ]
 
+const monthTwoFlow = [
+  renderMonthTwoIntro,
+  renderMonthTwoAlbum,
+  renderMonthTwoBirthday,
+  renderMonthTwoGallery,
+  renderMonthTwoLetter,
+  renderMonthTwoFinal
+]
+
 function startFlow(flow) {
   activeFlow = flow
   currentScene = 0
@@ -111,6 +127,9 @@ function openMonth(id) {
   if (id === 'month-1') {
     startFlow(monthOneFlow)
   }
+  if (id === 'month-2') {
+    startFlow(monthTwoFlow)
+  }
 }
 
 function startExperience() {
@@ -118,10 +137,12 @@ function startExperience() {
 }
 
 function nextScene() {
+
   currentScene++
-
-  if (currentScene >= activeFlow.length) return
-
+  if (currentScene >= activeFlow.length) {
+    renderStoryHub(app, openMonth, startExperience)
+    return
+  }
   activeFlow[currentScene](app, nextScene, startExperience, openMonth)
 }
 

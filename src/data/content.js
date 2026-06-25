@@ -203,9 +203,9 @@ export const content = {
           id: 'month-2',
           number: '02',
           name: 'Junio',
-          title: 'Próximamente',
-          status: 'bloqueado',
-          unlocked: false
+          title: 'Segundo mes',
+          status: 'abrir',
+          unlocked: true
         },
         {
           id: 'month-3',
@@ -317,6 +317,70 @@ export const content = {
       line: 'ya te siento como mi hogar.',
       end: 'feliz primer mes',
       button: 'volver al archivo'
+    },
+
+    monthTwoIntro: {
+      kicker: 'mes 2',
+      title: 'recap',
+      text: 'Otro mes pasó, y esta vez no quiero contarlo con números. Quiero recordarlo con momentos, llamadas, sonrisas y pequeños detalles que hicieron que la distancia se sintiera un poco más pequeña.',
+      button: 'abrir recuerdos'
+    },
+
+    monthTwoAlbum: {
+      kicker: 'videollamadas',
+      button: 'siguiente',
+      memories: [
+        {
+          image: '/assets/month2/call-01.jpeg',
+          caption: 'Algunas llamadas se volvieron parte de mis días sin que me diera cuenta.'
+        },
+        {
+          image: '/assets/month2/call-02.jpeg',
+          caption: 'Había momentos simples que, contigo, se sentían especiales.'
+        }
+      ]
+    },
+
+    monthTwoBirthday: {
+      kicker: '25.06',
+      title: 'mi cumpleaños',
+      callImage: '/assets/month2/birthday-call.jpeg',
+      messageImage: '/assets/month2/birthday-message.png',
+      text: 'Ese día no fue solo una videollamada más. Era mi cumpleaños, y aun estando lejos encontraste una forma de sorprenderme, de hacerme sonreír y de convertir ese momento en uno de los recuerdos más especiales de este mes.',
+      note: 'Tu mensaje y tu sorpresa se sintieron como un abrazo desde la distancia. De esos detalles que no se olvidan.',
+      button: 'seguir recordando'
+    },
+
+    monthTwoGallery: {
+      kicker: 'galería',
+      title: 'momentos guardados',
+      text: 'No fueron solo capturas. Fueron pedacitos de días que se quedaron conmigo.',
+      button: 'leer algo para ti',
+      images: [
+        '/assets/month2/photo-01.jpeg',
+        '/assets/month2/photo-02.jpeg',
+        '/assets/month2/photo-03.jpeg',
+        '/assets/month2/photo-04.jpeg'
+      ]
+    },
+
+    monthTwoLetter: {
+      kicker:"para ti",
+      title:"gracias por este mes",
+      text:`No sé cómo lo haces, pero incluso en la distancia consigues que los días se sientan diferentes.
+    Cada llamada, cada mensaje y cada pequeño detalle hicieron que este mes fuera inolvidable para mí.
+    Gracias por sorprenderme en mi cumpleaños, por hacerme sentir acompañado incluso estando tan lejos.
+    Si este fue solo nuestro segundo mes...
+    No puedo esperar a descubrir todo lo que todavía nos queda por vivir.`,
+      button:"continuar"
+    },
+
+    monthTwoFinal:{
+      image:"/assets/month2/final.png",
+      title:"month 2",
+      text:"Dos meses después... todavía sigo sonriendo cada vez que aparece una notificación tuya.",
+      button:"continuar",
+      continued: 'to be continued...'
     },
   },
 
@@ -526,9 +590,9 @@ export const content = {
           id: 'month-2',
           number: '02',
           name: 'June',
-          title: 'Coming soon',
-          status: 'locked',
-          unlocked: false
+          title: 'Second month',
+          status: 'open',
+          unlocked: true
         },
         {
           id: 'month-3',
@@ -674,6 +738,70 @@ export const content = {
       end: 'happy first month',
       button: 'back to archive'
     },
+
+    monthTwoIntro: {
+      kicker: 'month 2',
+      title: 'recap',
+      text: 'Another month passed, and this time I do not want to count it with numbers. I want to remember it through moments, calls, smiles, and little details that made the distance feel a little smaller.',
+      button: 'open memories'
+    },
+
+    monthTwoAlbum: {
+      kicker: 'video calls',
+      button: 'next',
+      memories: [
+        {
+          image: '/assets/month2/call-01.jpeg',
+          caption: 'Some calls quietly became part of my days.'
+        },
+        {
+          image: '/assets/month2/call-02.jpeg',
+          caption: 'Simple moments felt special when they were with you.'
+        }
+      ]
+    },
+
+    monthTwoBirthday: {
+      kicker: '25.06',
+      title: 'my birthday',
+      callImage: '/assets/month2/birthday-call.jpeg',
+      messageImage: '/assets/month2/birthday-message.png',
+      text: 'That day was not just another video call. It was my birthday, and even from far away you found a way to surprise me, make me smile, and turn that moment into one of the most special memories of this month.',
+      note: 'Your message and your surprise felt like a hug from the distance. One of those little details I will never forget.',
+      button: 'keep remembering'
+    },
+
+    monthTwoGallery: {
+      kicker: 'gallery',
+      title: 'saved moments',
+      text: 'They were not just screenshots. They were little pieces of days that stayed with me.',
+      button: 'read something for you',
+      images: [
+        '/assets/month2/photo-01.jpeg',
+        '/assets/month2/photo-02.jpeg',
+        '/assets/month2/photo-03.jpeg',
+        '/assets/month2/photo-04.jpeg'
+      ]
+    },
+
+    monthTwoLetter:{
+      kicker:"for you",
+      title:"thank you for this month",
+      text:`I still don't know how you do it, but somehow you make even ordinary days feel special.
+    Every call, every message and every little detail made this month unforgettable.
+    Thank you for surprising me on my birthday and making me feel close to you even from miles away.
+    If this was only our second month...
+    I can't wait to see everything that is still waiting for us.`,
+      button:"continue"
+    },
+
+    monthTwoFinal:{
+      image:"/assets/month2/final.png",
+      title:"month 2",
+      text:"Two months later... I still smile every time I see your name on my screen.",
+      button:"continue",
+      continued: 'to be continued...'
+   },
   },
 
   ph: {
@@ -882,9 +1010,9 @@ export const content = {
           id: 'month-2',
           number: '02',
           name: 'Hunyo',
-          title: 'Parating pa lang',
-          status: 'locked',
-          unlocked: false
+          title: 'ikalawang buwan',
+          status: 'buksan',
+          unlocked: true
         },
         {
           id: 'month-3',
@@ -1029,6 +1157,70 @@ export const content = {
       line: 'parang tahanan na kita.',
       end: 'happy first month',
       button: 'bumalik sa archive'
+    },
+
+    monthTwoIntro: {
+      kicker: 'month 2',
+      title: 'recap',
+      text: 'Isa na namang buwan ang lumipas, at this time hindi ko siya gustong bilangin gamit ang numbers. Gusto ko siyang maalala sa mga moments, calls, smiles, at maliliit na details na nagpaliit kahit kaunti sa distance natin.',
+      button: 'buksan ang memories'
+    },
+
+    monthTwoAlbum: {
+      kicker: 'video calls',
+      button: 'next',
+      memories: [
+        {
+          image: '/assets/month2/call-01.jpeg',
+          caption: 'May mga calls na naging part na ng araw ko nang hindi ko namamalayan.'
+        },
+        {
+          image: '/assets/month2/call-02.jpeg',
+          caption: 'Simple moments felt special kapag kasama ka.'
+        }
+      ]
+    },
+
+    monthTwoBirthday: {
+      kicker: '25.06',
+      title: 'birthday ko',
+      callImage: '/assets/month2/birthday-call.jpeg',
+      messageImage: '/assets/month2/birthday-message.png',
+      text: 'Hindi lang iyon basta video call. Birthday ko iyon, at kahit malayo ka, nakahanap ka pa rin ng paraan para i surprise ako, mapangiti ako, at gawing isa sa pinaka special na alaala ng buwang ito ang moment na iyon.',
+      note: 'Yung message at surprise mo parang yakap mula sa malayo. Isa sa mga details na hindi ko makakalimutan.',
+      button: 'ituloy ang memories'
+    },
+
+    monthTwoGallery: {
+      kicker: 'gallery',
+      title: 'saved moments',
+      text: 'Hindi lang sila screenshots. Maliliit silang parte ng mga araw na naiwan sa akin.',
+      button: 'basahin ang para sa iyo',
+      images: [
+        '/assets/month2/photo-01.jpeg',
+        '/assets/month2/photo-02.jpeg',
+        '/assets/month2/photo-03.jpeg',
+        '/assets/month2/photo-04.jpeg'
+      ]
+    },
+
+    monthTwoLetter:{
+      kicker:"para sa'yo",
+      title:"salamat sa buwan na ito",
+      text:`Hindi ko pa rin alam kung paano mo nagagawa, pero napapasaya mo ang ordinaryong araw.
+    Bawat call, bawat message at bawat maliit na detail naging espesyal ang buwang ito.
+    Salamat sa birthday surprise at sa pagpaparamdam na kasama pa rin kita kahit magkalayo tayo.
+    Kung ito pa lang ang second month natin...
+    Excited na akong makita ang lahat ng susunod pang memories natin.`,
+      button:"continue"
+    },
+
+    monthTwoFinal:{
+      image:"/assets/month2/final.png",
+      title:"month 2",
+      text:"Dalawang buwan na... pero napapangiti pa rin ako sa tuwing nakikita ko ang pangalan mo.",
+      button:"continue",
+      continued: 'to be continued...'
     },
   }
 }
