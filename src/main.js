@@ -27,6 +27,13 @@ import { renderMonthTwoGallery } from './months/month2/monthTwoGallery.js'
 import { renderMonthTwoLetter } from './months/month2/monthTwoLetter.js'
 import { renderMonthTwoFinal } from './months/month2/monthTwoFinal.js'
 
+import { renderMonthThreeIntro } from './months/month3/monthThreeIntro.js'
+import { renderMonthThreeCalls } from './months/month3/monthThreeCalls.js'
+import { renderMonthThreeUnmasked } from './months/month3/monthThreeUnmasked.js'
+import { renderMonthThreeGame } from './months/month3/monthThreeGame.js'
+import { renderMonthThreeHiddenMemory } from './months/month3/monthThreeHiddenMemory.js'
+import { renderMonthThreeLetter } from './months/month3/monthThreeLetter'
+
 inject()
 
 window.__lang = 'es'
@@ -116,6 +123,15 @@ const monthTwoFlow = [
   renderMonthTwoFinal
 ]
 
+const monthThreeFlow = [
+  renderMonthThreeIntro,
+  renderMonthThreeCalls,
+  renderMonthThreeUnmasked,
+  renderMonthThreeGame,
+  renderMonthThreeHiddenMemory,
+  renderMonthThreeLetter
+]
+
 function startFlow(flow) {
   activeFlow = flow
   currentScene = 0
@@ -129,6 +145,9 @@ function openMonth(id) {
   }
   if (id === 'month-2') {
     startFlow(monthTwoFlow)
+  }
+  if (id === 'month-3') {
+    startFlow(monthThreeFlow)
   }
 }
 

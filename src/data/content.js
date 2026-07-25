@@ -211,9 +211,9 @@ export const content = {
           id: 'month-3',
           number: '03',
           name: 'Julio',
-          title: 'Próximamente',
-          status: 'bloqueado',
-          unlocked: false
+          title: 'Tercer mes',
+          status: 'abrir',
+          unlocked: true
         },
         {
           id: 'month-4',
@@ -381,6 +381,140 @@ export const content = {
       text:"Dos meses después... todavía sigo sonriendo cada vez que aparece una notificación tuya.",
       button:"continuar",
       continued: 'to be continued...'
+    },
+
+    monthThreeIntro: {
+      chapter: 'capítulo 03',
+      month: 'julio 2026',
+      title: 'Julio',
+
+      firstLine: 'El mes en el que nos permitimos',
+      firstHighlight: 'ser completamente nosotros.',
+
+      secondLine1: 'Sin máscaras.',
+      secondLine2: 'Sin miedo.',
+      secondLine3: 'Solo tú...',
+      secondLine4: 'y yo.',
+
+      button: 'continuar'
+    },
+
+    monthThreeCalls: {
+      connected: 'conectados',
+      callType: 'videollamada',
+
+      message1: '“¿Cómo pasó tanto tiempo?”',
+      message2: 'Ninguno de los dos quería terminar la llamada.',
+      message3: 'Siempre encontrábamos algo más que contarnos.',
+      message4: 'Y cuando ya no había nada que decir, igual queríamos quedarnos.',
+
+      distanceLabel: 'distancia',
+      distance: 'miles de kilómetros',
+
+      feelingLabel: 'pero durante esas llamadas',
+      feeling: 'la distancia casi desaparecía.',
+
+      button: 'continuar'
+    },
+
+    monthThreeUnmasked: {
+      opening1: 'Poco a poco...',
+      opening2: 'nos fuimos mostrando más.',
+      opening3: 'Sin prisa.\nSin miedo.',
+
+      memory1: 'Nos vimos cansados.',
+      memory2: 'Nos vimos despeinados.',
+      memory3: 'Nos vimos en silencio.',
+      memory4: 'Nos vimos felices.',
+      memory5: 'Y cada vez nos sentimos más cerca.',
+
+      reflection1:
+        'No cambió quiénes éramos.',
+
+      reflection2:
+        'Siempre nos sentimos\n cómodos siendo nosotros.',
+
+      button: 'continuar'
+    },
+
+    monthThreeGame: {
+      title: 'GAME NIGHT',
+
+      intro:
+        'Entre tantas conversaciones,\ntambién hubo momentos para jugar.\n\nNo era algo de todos los días,\npero siempre conseguía hacernos reír.',
+
+      playerOne: 'MACHY',
+      playerTwo: 'CHI',
+
+      starting: 'MATCH STARTING...',
+      playing: 'MATCH IN PROGRESS',
+
+      line1: '"¡Bien jugado!"',
+      line2: '"Esta vez gano yo."',
+      line3: '"Eso estuvo muy bien."',
+      line4: '"¿Otra partida?"',
+
+      reflection1:
+        'Los dos queríamos ganar.\n\nPero también sabíamos reconocer\ncuando el otro lo hacía bien.',
+
+      reflection2:
+        'Éramos competitivos...\n\npero siempre estábamos\ndel mismo lado.',
+
+      button: 'continuar'
+    },
+
+    monthThreeHiddenMemory: {
+      eyebrow: 'UN RECUERDO DE JULIO',
+
+      title:
+        'Algunos momentos\nse quedan escondidos.',
+
+      instruction:
+        'No porque fueran pequeños,\nsino porque se volvieron parte de nosotros.',
+
+      constellationLabel:
+        'Constelación de recuerdos',
+
+      revealLabel:
+        'Descubrir el recuerdo escondido',
+
+      hint:
+        'toca el punto que sigue brillando',
+
+      revealedLabel:
+        'RECUERDO ENCONTRADO',
+
+      memory:
+        'Hubo momentos en los que no hacíamos nada extraordinario.\n\nSolo estábamos ahí,\nacompañándonos.',
+
+      reflection:
+        'Y quizá por eso los recuerdo tanto.\n\nPorque contigo, incluso lo cotidiano\nempezaba a sentirse especial.',
+
+      button: 'continuar'
+    },
+
+    monthThreeLetter: {
+      month: 'JULIO',
+      label: 'UNA CARTA PARA TI',
+      greeting: 'Mi Chi,',
+
+      paragraphs: [
+        'Julio hizo que dejara de preguntarme si algún día nos encontraríamos. En vez de eso, empecé a imaginar cómo sería cuando finalmente llegara ese día.',
+
+        'Pensaba en nuestro primer abrazo, en poder tomar tu mano y en caminar contigo sin estar pendientes del reloj, porque ya no habría una llamada que estuviera a punto de terminar.',
+
+        'Y sí, también pensaba en esos besos de los que tanto hablábamos, en todo lo que prometíamos entre risas y en esas conversaciones que solo tú y yo entendíamos.',
+
+        'Pero con el tiempo comprendí que lo que más esperaba iba mucho más allá de eso. Quería descubrir cómo sería despertar sabiendo que estabas a mi lado, ver tu cara sin una pantalla de por medio y escuchar tu voz tan cerca que ya no hiciera falta subir el volumen.',
+
+        'Quería poder abrazarte sin pensar en cuántos kilómetros nos separaban y quedarme contigo, incluso en silencio, incluso cuando no estuviéramos haciendo absolutamente nada.',
+
+        'Porque entendí que no soñaba solamente con un momento. Soñaba con una vida en la que los “buenas noches” ya no significaran despedirse y en la que cada mañana pudiera comenzar contigo.'
+      ],
+
+      closing: 'Con amor,',
+      signature: 'tu Machy ♡',
+      button: 'continuar'
     },
   },
 
@@ -598,9 +732,9 @@ export const content = {
           id: 'month-3',
           number: '03',
           name: 'July',
-          title: 'Coming soon',
-          status: 'locked',
-          unlocked: false
+          title: 'Third month',
+          status: 'open',
+          unlocked: true
         },
         {
           id: 'month-4',
@@ -801,7 +935,141 @@ export const content = {
       text:"Two months later... I still smile every time I see your name on my screen.",
       button:"continue",
       continued: 'to be continued...'
-   },
+    },
+
+    monthThreeIntro: {
+      chapter: 'chapter 03',
+      month: 'july 2026',
+      title: 'July',
+
+      firstLine: 'The month when we allowed ourselves',
+      firstHighlight: 'to be completely ourselves.',
+
+      secondLine1: 'No masks.',
+      secondLine2: 'No fear.',
+      secondLine3: 'Just you...',
+      secondLine4: 'and me.',
+
+      button: 'continue'
+    },
+
+    monthThreeCalls: {
+      connected: 'connected',
+      callType: 'video call',
+
+      message1: '“How did so much time pass?”',
+      message2: 'Neither of us wanted the call to end.',
+      message3: 'We always found one more thing to talk about.',
+      message4: 'And when there was nothing left to say, we still wanted to stay.',
+
+      distanceLabel: 'distance',
+      distance: 'thousands of kilometers',
+
+      feelingLabel: 'but during those calls',
+      feeling: 'the distance almost disappeared.',
+
+      button: 'continue'
+    },
+
+    monthThreeUnmasked: {
+      opening1: 'Little by little...',
+      opening2: 'we began showing more of ourselves.',
+      opening3: 'No rush.\nNo fear.',
+
+      memory1: 'We saw each other tired.',
+      memory2: 'We saw each other with messy hair.',
+      memory3: 'We saw each other in silence.',
+      memory4: 'We saw each other happy.',
+      memory5: 'And each time, we felt closer.',
+
+      reflection1:
+        'It did not change who we were.',
+
+      reflection2:
+        'We always feel\ncomfortable being ourselves.',
+
+      button: 'continue'
+    },
+
+    monthThreeGame: {
+      title: 'GAME NIGHT',
+
+      intro:
+        'Between all our conversations,\nthere were also moments when we played.\n\nIt was not something we did every day,\nbut it always managed to make us laugh.',
+
+      playerOne: 'MACHY',
+      playerTwo: 'CHI',
+
+      starting: 'MATCH STARTING...',
+      playing: 'MATCH IN PROGRESS',
+
+      line1: '"Well played!"',
+      line2: '"I am winning this time."',
+      line3: '"That was really good."',
+      line4: '"One more game?"',
+
+      reflection1:
+        'We both wanted to win.\n\nBut we also knew how to recognize\nwhen the other played well.',
+
+      reflection2:
+        'We were competitive...\n\nbut we were always\non the same side.',
+
+      button: 'continue'
+    },
+
+    monthThreeHiddenMemory: {
+      eyebrow: 'A MEMORY FROM JULY',
+
+      title:
+        'Some moments\nremain hidden.',
+
+      instruction:
+        'Not because they were small,\nbut because they became part of us.',
+
+      constellationLabel:
+        'Constellation of memories',
+
+      revealLabel:
+        'Reveal the hidden memory',
+
+      hint:
+        'touch the point that keeps glowing',
+
+      revealedLabel:
+        'MEMORY FOUND',
+
+      memory:
+        'There were moments when we did nothing extraordinary.\n\nWe were simply there,\nkeeping each other company.',
+
+      reflection:
+        'And perhaps that is why I remember them so much.\n\nBecause with you, even ordinary moments\nbegan to feel special.',
+
+      button: 'continue'
+    },
+
+    monthThreeLetter: {
+      month: 'JULY',
+      label: 'A LETTER FOR YOU',
+      greeting: 'My Chi,',
+
+      paragraphs: [
+        'July made me stop wondering whether we would ever meet. Instead, I began imagining what it would be like when that day finally arrived.',
+
+        'I thought about our first hug, about finally holding your hand, and about walking beside you without watching the clock, because there would no longer be a call that was about to end.',
+
+        'And yes, I also thought about those kisses we talked about so many times, about everything we promised between laughs, and about those conversations that only you and I truly understood.',
+
+        'But with time, I realized that what I was waiting for went far beyond that. I wanted to know what it would be like to wake up knowing you were beside me, to see your face without a screen between us, and to hear your voice so close that I would not need to turn up the volume.',
+
+        'I wanted to hold you without thinking about how many miles separated us and simply stay with you, even in silence, even when we were doing absolutely nothing.',
+
+        'Because I understood that I was not dreaming only about a moment. I was dreaming about a life where “good night” would no longer mean goodbye and where every morning could begin with you.'
+      ],
+
+      closing: 'With love,',
+      signature: 'your Machy ♡',
+      button: 'continue'
+    },
   },
 
   ph: {
@@ -1018,9 +1286,9 @@ export const content = {
           id: 'month-3',
           number: '03',
           name: 'Hulyo',
-          title: 'Parating pa lang',
-          status: 'locked',
-          unlocked: false
+          title: 'Ikatlong buwan',
+          status: 'buksan',
+          unlocked: true
         },
         {
           id: 'month-4',
@@ -1221,6 +1489,140 @@ export const content = {
       text:"Dalawang buwan na... pero napapangiti pa rin ako sa tuwing nakikita ko ang pangalan mo.",
       button:"continue",
       continued: 'to be continued...'
+    },
+
+    monthThreeIntro: {
+      chapter: 'chapter 03',
+      month: 'hulyo 2026',
+      title: 'Hulyo',
+
+      firstLine: 'Ang buwan kung kailan hinayaan natin ang ating sarili',
+      firstHighlight: 'na maging tunay na tayo.',
+
+      secondLine1: 'Walang maskara.',
+      secondLine2: 'Walang takot.',
+      secondLine3: 'Ikaw lang...',
+      secondLine4: 'at ako.',
+
+      button: 'magpatuloy'
+    },
+
+    monthThreeCalls: {
+      connected: 'connected',
+      callType: 'video call',
+
+      message1: '“Paano lumipas nang ganoon kabilis ang oras?”',
+      message2: 'Pareho nating ayaw tapusin ang tawag.',
+      message3: 'Palagi tayong may isa pang bagay na gustong ikuwento.',
+      message4: 'At kahit wala nang masabi, gusto pa rin nating manatili.',
+
+      distanceLabel: 'distansya',
+      distance: 'libu-libong kilometro',
+
+      feelingLabel: 'pero habang magkausap tayo',
+      feeling: 'halos nawawala ang distansya.',
+
+      button: 'magpatuloy'
+    },
+
+    monthThreeUnmasked: {
+      opening1: 'Unti-unti...',
+      opening2: 'mas marami nating ipinakita ang ating sarili.',
+      opening3: 'Walang pagmamadali.\nWalang takot.',
+
+      memory1: 'Nakita natin ang isa’t isa na pagod.',
+      memory2: 'Nakita natin ang isa’t isa na magulo ang buhok.',
+      memory3: 'Nakita natin ang isa’t isa sa katahimikan.',
+      memory4: 'Nakita natin ang isa’t isa na masaya.',
+      memory5: 'At sa bawat pagkakataon, mas lalo tayong naging malapit.',
+
+      reflection1:
+        'Hindi nagbago kung sino tayo.',
+
+      reflection2:
+        'Palagi kaming\nkomportable na maging kami mismo.',
+
+      button: 'magpatuloy'
+    },
+
+    monthThreeGame: {
+      title: 'GAME NIGHT',
+
+      intro:
+        'Sa pagitan ng marami nating usapan,\nmay mga pagkakataon din na naglaro tayo.\n\nHindi natin ito ginagawa araw-araw,\npero palagi tayong napapatawa nito.',
+
+      playerOne: 'MACHY',
+      playerTwo: 'CHI',
+
+      starting: 'MATCH STARTING...',
+      playing: 'MATCH IN PROGRESS',
+
+      line1: '"Ang galing!"',
+      line2: '"Ako naman ang mananalo ngayon."',
+      line3: '"Ang ganda noon."',
+      line4: '"Isa pang laro?"',
+
+      reflection1:
+        'Pareho nating gustong manalo.\n\nPero marunong din nating kilalanin\nkapag mahusay ang isa.',
+
+      reflection2:
+        'Palaban tayo...\n\npero palagi pa rin tayong\nnasa iisang panig.',
+
+      button: 'magpatuloy'
+    },
+
+    monthThreeHiddenMemory: {
+      eyebrow: 'ISANG ALAALA MULA HULYO',
+
+      title:
+        'May mga sandaling\nnananatiling nakatago.',
+
+      instruction:
+        'Hindi dahil maliit ang mga iyon,\nkundi dahil naging bahagi na natin.',
+
+      constellationLabel:
+        'Konstelasyon ng mga alaala',
+
+      revealLabel:
+        'Tuklasin ang nakatagong alaala',
+
+      hint:
+        'pindutin ang puntong patuloy na kumikislap',
+
+      revealedLabel:
+        'NATAGPUANG ALAALA',
+
+      memory:
+        'May mga sandaling wala naman tayong ginagawang espesyal.\n\nNaroon lang tayo,\nmagkasamang naglalaan ng oras.',
+
+      reflection:
+        'At marahil iyon ang dahilan kung bakit malinaw ko silang naaalala.\n\nDahil kapag kasama kita,\npati ang karaniwang sandali ay nagiging espesyal.',
+
+      button: 'magpatuloy'
+    },
+
+    monthThreeLetter: {
+      month: 'HULYO',
+      label: 'ISANG LIHAM PARA SA IYO',
+      greeting: 'Mahal kong Chi,',
+
+      paragraphs: [
+        'Noong Hulyo, tumigil na akong magtanong sa sarili ko kung magkikita ba tayo balang araw. Sa halip, nagsimula kong isipin kung ano ang magiging pakiramdam kapag dumating na sa wakas ang araw na iyon.',
+
+        'Iniisip ko ang una nating yakap, ang paghawak ko sa kamay mo, at ang paglalakad nating magkasama nang hindi tumitingin sa oras, dahil wala nang tawag na malapit nang matapos.',
+
+        'At oo, iniisip ko rin ang mga halik na madalas nating pag-usapan, ang lahat ng ipinapangako natin habang nagtatawanan, at ang mga usapang tayo lang dalawa ang tunay na nakakaunawa.',
+
+        'Pero habang lumilipas ang panahon, naunawaan ko na higit pa pala roon ang hinihintay ko. Gusto kong malaman kung ano ang pakiramdam ng magising na nasa tabi kita, makita ang mukha mo nang walang screen sa pagitan natin, at marinig ang boses mo nang napakalapit na hindi ko na kailangang lakasan ang volume.',
+
+        'Gusto kitang mayakap nang hindi iniisip kung ilang kilometro ang pagitan natin at manatili lang kasama ka, kahit tahimik, kahit wala tayong ginagawa.',
+
+        'Dahil naunawaan ko na hindi lang isang sandali ang pinapangarap ko. Pinapangarap ko ang isang buhay kung saan ang “good night” ay hindi na nangangahulugang paalam at kung saan ang bawat umaga ay maaaring magsimula kasama ka.'
+      ],
+
+      closing: 'Nagmamahal,',
+      signature: 'ang iyong Machy ♡',
+      button: 'magpatuloy'
     },
   }
 }
