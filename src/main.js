@@ -34,6 +34,12 @@ import { renderMonthThreeGame } from './months/month3/monthThreeGame.js'
 import { renderMonthThreeHiddenMemory } from './months/month3/monthThreeHiddenMemory.js'
 import { renderMonthThreeLetter } from './months/month3/monthThreeLetter'
 
+import { renderMonthFourIntro } from './months/month4/monthFourIntro.js'
+import { renderMonthFourMac } from './months/month4/monthFourMac.js'
+import { renderMonthFourJourney } from './months/month4/monthFourJourney.js'
+import { renderMonthFourWakeUp } from './months/month4/monthFourWakeUp.js'
+import { renderMonthFourLetter } from './months/month4/monthFourLetter.js'
+
 inject()
 
 window.__lang = 'es'
@@ -132,6 +138,14 @@ const monthThreeFlow = [
   renderMonthThreeLetter
 ]
 
+const monthFourFlow = [
+  renderMonthFourIntro,
+  renderMonthFourMac,
+  renderMonthFourJourney,
+  renderMonthFourWakeUp,
+  renderMonthFourLetter
+]
+
 function startFlow(flow) {
   activeFlow = flow
   currentScene = 0
@@ -148,6 +162,9 @@ function openMonth(id) {
   }
   if (id === 'month-3') {
     startFlow(monthThreeFlow)
+  }
+  if (id === 'month-4') {
+    startFlow(monthFourFlow)
   }
 }
 

@@ -219,9 +219,9 @@ export const content = {
           id: 'month-4',
           number: '04',
           name: 'Agosto',
-          title: 'Próximamente',
-          status: 'bloqueado',
-          unlocked: false
+          title: 'Cuarto mes',
+          status: 'abrir',
+          unlocked: true
         },
         {
           id: 'month-5',
@@ -516,6 +516,186 @@ export const content = {
       signature: 'tu Machy ♡',
       button: 'continuar'
     },
+    monthFourIntro: {
+      chapter: 'capítulo 04',
+      month: 'agosto 2026',
+      title: 'Agosto',
+      firstLine: 'Este mes nos encontró',
+      firstHighlight: 'viviendo un poco más en movimiento.',
+      secondLine: 'Entre días ocupados, viajes y nuevas rutinas,',
+      secondHighlight: 'aprendimos a estar presentes de otras maneras.',
+      finalLine1: 'Porque estar para alguien',
+      finalLine2: 'no siempre se ve igual.',
+      finalHighlight: 'Pero se sigue sintiendo.',
+      button: 'continuar'
+    },
+
+    monthFourMac: {
+      eyebrow: 'un pequeño recuerdo',
+      title: 'Let me show you.',
+      subtitle:
+        'Tu primera Mac. Una videollamada. Y yo intentando enseñarte todo lo que podía.',
+
+      callLabel: 'Videollamada · compartiendo pantalla',
+      connected: 'conectados',
+      learning: 'aprendiendo macOS',
+
+      lesson: 'lección',
+
+      lessons: [
+        {
+          title: 'Copiar en Mac',
+          text:
+            'Primera regla: aquí Control ya no manda. ¿Qué combinación usamos para copiar?',
+          shortcut: '⌘ + C',
+          options: [
+            'Control + C',
+            'Command + C',
+            'Option + C'
+          ],
+          correct: 1,
+          wrong:
+            'Casi 😅 acuérdate: Command es tu nuevo mejor amigo.',
+          correctText:
+            'Eso es. Ya estás pensando como usuaria de Mac my Chi'
+        },
+
+        {
+          title: 'Cambiar de aplicación',
+          text:
+            'Tienes varias cosas abiertas. ¿Cómo saltamos rápidamente entre aplicaciones?',
+          shortcut: '⌘ + Tab',
+          options: [
+            'Command + Tab',
+            'Control + Tab',
+            'Shift + Tab'
+          ],
+          correct: 0,
+          wrong:
+            'No esa 😌 piensa en el Command otra vez.',
+          correctText:
+            'Perfecto. Una cosa menos que preguntarme... tal vez hehe'
+        },
+
+        {
+          title: 'Encontrar tus cosas',
+          text:
+            'Y cuando no sabes dónde quedó un archivo... ¿qué aplicación termina salvándote?',
+          shortcut: '¿Dónde está mi archivo?',
+          options: [
+            'Finder',
+            'Safari',
+            'Notas'
+          ],
+          correct: 0,
+          wrong:
+            'Nope hehe esa no es la que usamos para buscar tus archivos.',
+          correctText:
+            'Exacto. Oficialmente ya sobreviviste a tu primera clase de Mac.'
+        }
+      ],
+
+      closingSmall:
+        'Pensé que ese día simplemente te estaba enseñando a usar una computadora.',
+
+      closingMain:
+        'Y me encanta poder ser esa persona a la que recurres cuando necesitas una mano.',
+
+      button: 'continuar'
+    },
+
+    monthFourJourney: {
+      eyebrow: 'un pedacito del mundo',
+      title: 'Wish you were here.',
+      intro:
+        'Este mes me llevó por lugares nuevos. Y de alguna forma, siempre terminaba queriendo compartirlos contigo.',
+
+      guatemala: {
+        country: 'Guatemala',
+        place: 'Guatemala City',
+        line1: 'Un lugar nuevo. Tantas cosas por descubrir.',
+        line2: 'Y tantas cosas que quería mostrarte.'
+      },
+
+      panajachel: {
+        country: 'Guatemala',
+        place: 'Panajachel',
+        line1: 'Aquí sí deseé muchísimo que estuvieras conmigo.',
+        line2: 'Quizá algún día esta no sea solo una foto mía.',
+        line3: 'Quizá sea una foto nuestra.'
+      },
+
+      panama: {
+        country: 'Panamá',
+        place: 'Panama City',
+        line1: 'Otro lugar increíble.',
+        line2: 'Y la misma persona en mi mente.'
+      },
+
+      send: {
+        sending: 'Enviando foto...',
+        delivered: '✓✓ Entregada',
+        recipient: 'para My Chi'
+      },
+
+      ending: {
+        line1:
+          'Quizá no solo te estaba enviando fotos.',
+        line2:
+          'Quizá estaba intentando llevarte conmigo.'
+      },
+
+      button: 'continuar'
+    },
+
+    monthFourWakeUp: {
+      eyebrow: 'A las seis de la mañana',
+      intro:
+        'Incluso desde tan lejos, encontrabas la forma de cuidarme.',
+      guateLocation: 'Guatemala',
+      firstTime: '5:58 AM',
+      incoming: 'Llamada entrante',
+      name: 'My Chiii 🫶',
+      philippinesTime:
+        'Filipinas · 7:58 PM',
+      firstLine:
+        'Buenos días, amor. Tienes que despertarte.',
+      sleeping:
+        'Unos minutos después...',
+      secondTime: '6:27 AM',
+      incomingAgain:
+        'Llamada entrante · otra vez',
+      philippinesTimeLater:
+        'Filipinas · 8:27 PM',
+      secondLine:
+        'Te volviste a dormir, ¿no?',
+      reply:
+        '...tal vez hehe',
+      ending: {
+        line1:
+          'Mientras yo despertaba para trabajar, tu día ya estaba terminando.',
+        line2:
+          'Y aun así, te quedabas un poquito más.',
+        line3:
+          'Solo para asegurarte de que el mío pudiera empezar.'
+      },
+      button:
+        'Continuar'
+    },
+
+    monthFourLetter: {
+      eyebrow: 'Mes cuatro',
+      title: 'Para ti, My Chi.',
+      line1:
+        'Este mes fue diferente a todos los anteriores.\n\nNo tuvimos tantas videollamadas, ni tantas noches viendo películas, ni tantas horas jugando juntos. A veces solo eran unos cuantos mensajes entre mi trabajo y tu día, intentando encontrar un momento para decirnos "te extraño".',
+      line2:
+        'Y, aun así, nunca sentí que estuvieras lejos.\n\nEstuviste conmigo mientras aprendías a usar tu nueva Mac y me dejabas ser, aunque fuera por un rato, el profesor más orgulloso del mundo. Estuviste conmigo durante cada ciudad de este viaje. Y también en esas madrugadas, cuando antes de las seis ya estabas llamándome para asegurarte de que no me quedara dormido.',
+      line3:
+        'Son detalles pequeños para cualquiera. Para mí, son la forma en la que me amas.\n\nExtrañé muchísimo verte. Extrañé escuchar tu voz, reír contigo y sentir que el día terminaba solamente cuando nos despedíamos.\n\nPero si este mes me enseñó algo, es que la distancia nunca ha sabido encontrar un lugar entre nosotros.\n\nAhora solo quiero que el próximo mes sea un poco más tranquilo. Volver a nuestras llamadas, a nuestras películas, a nuestros juegos. Volver, simplemente, a nosotros.\n\nTe amo, My Chi.',
+      signature: 'Siempre,',
+      name: 'Your Machy',
+      button: 'Continuar'
+    }
   },
 
   en: {
@@ -740,9 +920,9 @@ export const content = {
           id: 'month-4',
           number: '04',
           name: 'August',
-          title: 'Coming soon',
-          status: 'locked',
-          unlocked: false
+          title: 'Fourth month',
+          status: 'open',
+          unlocked: true
         },
         {
           id: 'month-5',
@@ -1070,6 +1250,191 @@ export const content = {
       signature: 'your Machy ♡',
       button: 'continue'
     },
+
+    monthFourIntro: {
+      chapter: 'chapter 04',
+      month: 'august 2026',
+      title: 'August',
+
+      firstLine: 'This month found us',
+      firstHighlight: 'living life a little more on the move.',
+
+      secondLine: 'Between busy days, travels and new routines,',
+      secondHighlight: 'we learned new ways of being there for each other.',
+
+      finalLine1: 'Because being there for someone',
+      finalLine2: 'does not always look the same.',
+      finalHighlight: 'But you can still feel it.',
+
+      button: 'continue'
+    },
+
+    monthFourMac: {
+      eyebrow: 'a little memory',
+      title: 'Let me show you.',
+      subtitle:
+        'Your first Mac. One video call. And me trying to teach you everything I could.',
+
+      callLabel: 'Video call · sharing screen',
+      connected: 'connected',
+      learning: 'learning macOS',
+
+      lesson: 'lesson',
+
+      lessons: [
+        {
+          title: 'Copying on Mac',
+          text:
+            'First rule: Control is no longer in charge here. What do we use to copy?',
+          shortcut: '⌘ + C',
+          options: [
+            'Control + C',
+            'Command + C',
+            'Option + C'
+          ],
+          correct: 1,
+          wrong:
+            'Almost 😅 remember: Command is your new best friend.',
+          correctText:
+            'That is it. You are already thinking like a Mac user my Chi'
+        },
+
+        {
+          title: 'Switching apps',
+          text:
+            'You have several things open. How do we quickly move between applications?',
+          shortcut: '⌘ + Tab',
+          options: [
+            'Command + Tab',
+            'Control + Tab',
+            'Shift + Tab'
+          ],
+          correct: 0,
+          wrong:
+            'Not that one 😌 think Command again.',
+          correctText:
+            'Perfect. One less thing to ask me about... maybe hehe'
+        },
+
+        {
+          title: 'Finding your things',
+          text:
+            'And when you have no idea where a file went... what app ends up saving you?',
+          shortcut: 'Where is my file?',
+          options: [
+            'Finder',
+            'Safari',
+            'Notes'
+          ],
+          correct: 0,
+          wrong:
+            'Nope hehe that is not the one we use to find your files.',
+          correctText:
+            'Exactly. You officially survived your first Mac lesson.'
+        }
+      ],
+
+      closingSmall:
+        'I thought that day I was simply teaching you how to use a computer.',
+
+      closingMain:
+        'And I love being the person you can come to whenever you need a hand.',
+
+      button: 'continue'
+    },
+
+    monthFourJourney: {
+      eyebrow: 'a little piece of the world',
+      title: 'Wish you were here.',
+      intro:
+        'This month took me to new places. And somehow, I always ended up wanting to share them with you.',
+
+      guatemala: {
+        country: 'Guatemala',
+        place: 'Guatemala City',
+        line1: 'A new place. So many things to discover.',
+        line2: 'And so many things I wanted to show you.'
+      },
+
+      panajachel: {
+        country: 'Guatemala',
+        place: 'Panajachel',
+        line1: 'Here, I really wished you were with me.',
+        line2: 'Maybe one day this will not just be my picture.',
+        line3: 'Maybe it will be ours.'
+      },
+
+      panama: {
+        country: 'Panama',
+        place: 'Panama City',
+        line1: 'Another incredible place.',
+        line2: 'And the same person on my mind.'
+      },
+
+      send: {
+        sending: 'Sending photo...',
+        delivered: '✓✓ Delivered',
+        recipient: 'to My Chi'
+      },
+
+      ending: {
+        line1:
+          'Maybe I was not just sending you pictures.',
+        line2:
+          'Maybe I was trying to bring you with me.'
+      },
+
+      button: 'continue'
+    },
+
+    monthFourWakeUp: {
+      eyebrow: 'At six in the morning',
+      intro:
+        'Even from so far away, you always found a way to take care of me.',
+      guateLocation: 'Guatemala',
+      firstTime: '5:58 AM',
+      incoming: 'Incoming call',
+      name: 'My Chiii 🫶',
+      philippinesTime:
+        'Philippines · 7:58 PM',
+      firstLine:
+        'Good morning, love. You need to wake up.',
+      sleeping:
+        'A few minutes later...',
+      secondTime: '6:27 AM',
+      incomingAgain:
+        'Incoming call · again',
+      philippinesTimeLater:
+        'Philippines · 8:27 PM',
+      secondLine:
+        'You fell asleep again, didn’t you?',
+      reply:
+        '...maybe hehe',
+      ending: {
+        line1:
+          'While I was waking up for work, your day was already ending.',
+        line2:
+          'And still, you stayed just a little longer.',
+        line3:
+          'Just to make sure mine could begin.'
+      },
+      button:
+        'Continue'
+    },
+
+    monthFourLetter: {
+      eyebrow: 'Month Four',
+      title: 'For you, My Chi.',
+      line1:
+        'This month felt different from all the ones before.\n\nWe didn’t have as many video calls, movie nights, or hours spent playing together. Sometimes all we had were a few messages between my work and your day, trying to find a little moment just to say, "I miss you."',
+      line2:
+        'And even then, I never felt like you were far away.\n\nYou were there while you learned how to use your new Mac, letting me be the proudest teacher in the world, even if only for a little while. You were there through every city I visited. And you were there on those early mornings, calling me before six just to make sure I wouldn’t fall asleep again.',
+      line3:
+        'To anyone else, they might seem like small moments. To me, they are the way you love me.\n\nI missed seeing you so much. I missed hearing your voice, laughing with you, and feeling like the day was only complete after saying goodnight to you.\n\nBut if this month taught me anything, it’s that distance has never really found a place between us.\n\nNow I just hope next month is a little quieter. I want our calls back, our movie nights back, our games back. I just want us back in our little routine.\n\nI love you, My Chi.',
+      signature: 'Always,',
+      name: 'Your Machy',
+      button: 'Continue'
+    }
   },
 
   ph: {
@@ -1294,9 +1659,9 @@ export const content = {
           id: 'month-4',
           number: '04',
           name: 'Agosto',
-          title: 'Parating pa lang',
-          status: 'locked',
-          unlocked: false
+          title: 'Ikaapat na buwan',
+          status: 'buksan',
+          unlocked: true
         },
         {
           id: 'month-5',
@@ -1624,5 +1989,190 @@ export const content = {
       signature: 'ang iyong Machy ♡',
       button: 'magpatuloy'
     },
+
+    monthFourIntro: {
+      chapter: 'chapter 04',
+      month: 'agosto 2026',
+      title: 'Agosto',
+
+      firstLine: 'Sa buwan na ito,',
+      firstHighlight: 'mas naging abala at mas gumalaw ang buhay natin.',
+
+      secondLine: 'Sa pagitan ng busy na araw, biyahe at bagong routine,',
+      secondHighlight: 'natuto tayong iparamdam ang presence natin sa ibang paraan.',
+
+      finalLine1: 'Kasi ang pagiging nandiyan para sa isang tao',
+      finalLine2: 'hindi palaging pareho ang itsura.',
+      finalHighlight: 'Pero pareho pa rin ang pakiramdam.',
+
+      button: 'magpatuloy'
+    },
+
+    monthFourMac: {
+      eyebrow: 'isang maliit na memory',
+      title: 'Let me show you.',
+      subtitle:
+        'First Mac mo. Isang video call. At ako na gustong ituro sa iyo lahat ng alam ko.',
+
+      callLabel: 'Video call · sharing screen',
+      connected: 'connected',
+      learning: 'learning macOS',
+
+      lesson: 'lesson',
+
+      lessons: [
+        {
+          title: 'Pag-copy sa Mac',
+          text:
+            'First rule: hindi na si Control ang bida dito. Ano ang ginagamit natin para mag-copy?',
+          shortcut: '⌘ + C',
+          options: [
+            'Control + C',
+            'Command + C',
+            'Option + C'
+          ],
+          correct: 1,
+          wrong:
+            'Almost 😅 tandaan mo, si Command na ang bago mong best friend.',
+          correctText:
+            'Ayan. Mac user ka na talaga my Chy'
+        },
+
+        {
+          title: 'Pag-switch ng apps',
+          text:
+            'Marami kang nakabukas. Paano tayo mabilis lumilipat sa ibang application?',
+          shortcut: '⌘ + Tab',
+          options: [
+            'Command + Tab',
+            'Control + Tab',
+            'Shift + Tab'
+          ],
+          correct: 0,
+          wrong:
+            'Hindi yan 😌 isipin mo ulit si Command.',
+          correctText:
+            'Perfect. Isang bagay na hindi mo na kailangang itanong sa akin... siguro hehe'
+        },
+
+        {
+          title: 'Hanapin ang files',
+          text:
+            'At kapag hindi mo alam kung saan napunta ang file mo... anong app ang sasagip sa iyo?',
+          shortcut: 'Nasaan yung file ko?',
+          options: [
+            'Finder',
+            'Safari',
+            'Notes'
+          ],
+          correct: 0,
+          wrong:
+            'Nope hehe hindi yan ang ginagamit natin para hanapin ang files.',
+          correctText:
+            'Exactly. Officially nakalampas ka na sa first Mac lesson mo.'
+        }
+      ],
+
+      closingSmall:
+        'Akala ko nung araw na iyon tinuturuan lang kitang gumamit ng computer.',
+
+      closingMain:
+        'Pero gusto ko na ako yung taong malalapitan mo kapag kailangan mo ng tulong.',
+
+      button: 'magpatuloy'
+    },
+
+    monthFourJourney: {
+      eyebrow: 'isang maliit na piece ng mundo',
+      title: 'Wish you were here.',
+      intro:
+        'Dinala ako ng buwan na ito sa mga bagong lugar. Pero kahit saan ako mapunta, gusto ko pa ring i-share sa iyo yung mga nakikita ko.',
+
+      guatemala: {
+        country: 'Guatemala',
+        place: 'Guatemala City',
+        line1: 'Bagong lugar. Ang daming bagong makikita.',
+        line2: 'At ang dami kong gustong ipakita sa iyo.'
+      },
+
+      panajachel: {
+        country: 'Guatemala',
+        place: 'Panajachel',
+        line1: 'Dito, sobrang gusto kong kasama ka sana.',
+        line2: 'Maybe one day hindi na lang ito picture ko.',
+        line3: 'Maybe magiging picture natin.'
+      },
+
+      panama: {
+        country: 'Panama',
+        place: 'Panama City',
+        line1: 'Isa na namang magandang lugar.',
+        line2: 'Pero parehong tao pa rin ang nasa isip ko.'
+      },
+
+      send: {
+        sending: 'Sending photo...',
+        delivered: '✓✓ Delivered',
+        recipient: 'to My Chi'
+      },
+
+      ending: {
+        line1:
+          'Maybe hindi lang pictures ang pinapadala ko sa iyo.',
+        line2:
+          'Maybe gusto lang kitang isama kahit hindi ka physically nandoon.'
+      },
+
+      button: 'magpatuloy'
+    },
+
+    monthFourWakeUp: {
+      eyebrow: 'Alas-sais ng umaga',
+      intro:
+        'Kahit napakalayo mo, palagi kang nakakahanap ng paraan para alagaan ako.',
+      guateLocation: 'Guatemala',
+      firstTime: '5:58 AM',
+      incoming: 'Papasok na tawag',
+      name: 'My Chiii 🫶',
+      philippinesTime:
+        'Pilipinas · 7:58 PM',
+      firstLine:
+        'Magandang umaga, love. Kailangan mo nang gumising.',
+      sleeping:
+        'Makalipas ang ilang minuto...',
+      secondTime: '6:27 AM',
+      incomingAgain:
+        'Papasok na tawag · ulit',
+      philippinesTimeLater:
+        'Pilipinas · 8:27 PM',
+      secondLine:
+        'Nakatulog ka ulit, ’di ba?',
+      reply:
+        '...siguro hehe',
+      ending: {
+        line1:
+          'Habang gumigising ako para magtrabaho, patapos na ang araw mo.',
+        line2:
+          'Pero nanatili ka pa rin nang kaunti.',
+        line3:
+          'Para lang masigurong makapagsisimula ang araw ko.'
+      },
+      button:
+        'Magpatuloy'
+    },
+
+    monthFourLetter: {
+      eyebrow: 'Ikaapat na Buwan',
+      title: 'Para sa’yo, My Chi.',
+      line1:
+        'Ibang-iba ang buwang ito kumpara sa mga nauna.\n\nHindi tayo gaanong nakapag-video call, nanood ng pelikula, o naglaro nang magkasama. Kadalasan, ilang mensahe lang ang naipapadala natin sa pagitan ng trabaho ko at ng araw mo, naghahanap ng kahit isang sandali para sabihing, "Miss na kita."',
+      line2:
+        'Pero kahit ganoon, hindi ko kailanman naramdaman na malayo ka.\n\nKasama kita habang natututo kang gamitin ang bago mong Mac at hinayaan mo akong maging pinakamasayang guro sa mundo, kahit sandali lang. Kasama rin kita sa bawat lungsod na pinuntahan ko. At higit sa lahat, sa mga madaling araw na tinatawagan mo ako bago mag-alas sais para siguraduhing hindi ako makakatulog ulit.',
+      line3:
+        'Sa iba, maliliit na bagay lang iyon. Pero para sa akin, iyon ang paraan ng pagmamahal mo sa akin.\n\nSobrang namiss kitang makita. Namiss kong marinig ang boses mo, matawa kasama ka, at maramdaman na kumpleto lang ang araw kapag nakapagpaalam na tayo sa isa’t isa.\n\nKung may itinuro man sa akin ang buwang ito, iyon ay hindi kailanman nagkaroon ng lugar ang distansya sa pagitan natin.\n\nSana mas tahimik at mas payapa ang susunod na buwan. Sana makabalik tayo sa mga tawag natin, sa mga movie nights natin, sa mga laro natin. Sa simpleng pagiging tayo ulit.\n\nMahal na mahal kita, My Chi.',
+      signature: 'Palagi,',
+      name: 'Your Machy',
+      button: 'Magpatuloy'
+    }
   }
 }
