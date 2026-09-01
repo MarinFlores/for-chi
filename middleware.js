@@ -1,29 +1,26 @@
-import { geolocation } from "@vercel/functions";
-
 export default function middleware(request) {
   const url = new URL(request.url);
 
-  // TEST: solo muestra el 404 cuando agregas ?hgfdstre=d
-  const testing404 = url.searchParams.get("hgfdstre") === "d";
-
-  // Bloqueo real (desactivado mientras pruebas)
-  // const { country } = geolocation(request);
-  // const blocked = country === "PE";
+  const testing404 = url.searchParams.get("test404") === "d";
 
   if (testing404) {
     return new Response(
       `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>404: NOT_FOUND</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
     html, body {
       margin: 0;
       width: 100%;
       height: 100%;
+      background: #fff;
+      color: #000;
       font-family: Arial, Helvetica, sans-serif;
     }
     body {
@@ -38,6 +35,7 @@ export default function middleware(request) {
     }
     .code {
       font-size: 24px;
+      font-weight: 500;
       padding-right: 20px;
       border-right: 1px solid #ddd;
     }
@@ -45,13 +43,16 @@ export default function middleware(request) {
       font-size: 14px;
       line-height: 1.6;
     }
+    .message strong {
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
   <div class="error">
     <div class="code">404</div>
     <div class="message">
-      <strong>NOT_FOUND</strong><br>
+      <strong>NOT_FOUND</strong><br/>
       The requested resource could not be found.
     </div>
   </div>
