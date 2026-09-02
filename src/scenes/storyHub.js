@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 import { texts } from '../i18n.js'
 
-export function renderStoryHub(app, openMonth, startExperience) {
+export function renderStoryHub(app, openMonth, startExperience, openDream) {
   const lang = window.__lang || 'es'
   const t = texts[lang].storyHub
 
@@ -9,8 +9,8 @@ export function renderStoryHub(app, openMonth, startExperience) {
     const lockedClass = month.unlocked ? 'unlocked' : 'locked'
 
     return `
-      <button 
-        class="month-card ${lockedClass}" 
+      <button
+        class="month-card ${lockedClass}"
         data-unlocked="${month.unlocked}"
         data-id="${month.id}"
       >
@@ -37,7 +37,10 @@ export function renderStoryHub(app, openMonth, startExperience) {
           ${monthsHTML}
         </div>
 
-        <button class="story-legacy-card">
+        <button
+          class="story-legacy-card"
+          data-story="legacy"
+        >
           <span class="story-legacy-label">
             ${t.legacy.title}
           </span>
@@ -47,14 +50,32 @@ export function renderStoryHub(app, openMonth, startExperience) {
           </span>
         </button>
 
-        <p id="locked-message" class="locked-message"></p>
+        <button
+          class="story-legacy-card"
+          data-story="dream"
+        >
+          <span class="story-legacy-label">
+            ${t.dream.title}
+          </span>
+
+          <span class="story-legacy-description">
+            ${t.dream.description}
+          </span>
+        </button>
+
+        <p
+          id="locked-message"
+          class="locked-message"
+        ></p>
       </section>
     </main>
   `
 
   const content = document.querySelector('.story-hub-content')
   const cards = document.querySelectorAll('.month-card')
-  const legacyCard = document.querySelector('.story-legacy-card')
+  const legacyCard = document.querySelector('[data-story="legacy"]')
+  const dreamCard = document.querySelector('[data-story="dream"]')
+  const storyCards = document.querySelectorAll('.story-legacy-card')
   const lockedMessage = document.querySelector('#locked-message')
 
   gsap.from(content, {
@@ -84,7 +105,7 @@ export function renderStoryHub(app, openMonth, startExperience) {
   )
 
   gsap.fromTo(
-    legacyCard,
+    storyCards,
     {
       opacity: 0,
       y: 16
@@ -93,6 +114,7 @@ export function renderStoryHub(app, openMonth, startExperience) {
       opacity: 1,
       y: 0,
       duration: 0.65,
+      stagger: 0.08,
       delay: 0.75,
       ease: 'power3.out'
     }
@@ -108,8 +130,15 @@ export function renderStoryHub(app, openMonth, startExperience) {
 
         gsap.fromTo(
           lockedMessage,
-          { opacity: 0, y: 8 },
-          { opacity: 1, y: 0, duration: 0.35 }
+          {
+            opacity: 0,
+            y: 8
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.35
+          }
         )
 
         return
@@ -132,6 +161,16 @@ export function renderStoryHub(app, openMonth, startExperience) {
       duration: 0.55,
       ease: 'power2.inOut',
       onComplete: () => startExperience()
+    })
+  })
+
+  dreamCard.addEventListener('click', () => {
+    gsap.to(content, {
+      opacity: 0,
+      y: -18,
+      duration: 0.55,
+      ease: 'power2.inOut',
+      onComplete: () => openDream()
     })
   })
 }

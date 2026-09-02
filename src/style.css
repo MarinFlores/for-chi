@@ -657,3 +657,7 @@ body {
 
   color: rgba(245,241,234,0.46);
 }
+
+.story-legacy-card + .story-legacy-card {
+  margin-top: 12px;
+}

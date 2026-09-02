@@ -16,6 +16,9 @@ import { renderHug } from './scenes/hug.js'
 import { renderSongLanguage } from './scenes/songLanguage.js'
 import { renderOfficialDay } from './scenes/officialDay.js'
 
+import { renderDreamIntro } from './scenes/dreamIntro.js'
+import { renderDream } from './scenes/dream.js'
+
 import { renderMonthOneIntro } from './months/month1/monthOneIntro.js'
 import { renderMonthLetter } from './months/month1/monthLetter.js'
 import { renderMonthFinal } from './months/month1/monthFinal.js'
@@ -146,6 +149,13 @@ const monthFourFlow = [
   renderMonthFourLetter
 ]
 
+const dreamFlow = [
+  renderDreamIntro,
+  (app) => {
+    renderDream(app, returnToStoryHub)
+  }
+]
+
 function startFlow(flow) {
   activeFlow = flow
   currentScene = 0
@@ -168,6 +178,17 @@ function openMonth(id) {
   }
 }
 
+function openDream() {
+  startFlow(dreamFlow)
+}
+
+function returnToStoryHub() {
+  activeFlow = []
+  currentScene = 0
+
+  renderStoryHub(app, openMonth, startExperience, openDream)
+}
+
 function startExperience() {
   startFlow(legacyFlow)
 }
@@ -176,7 +197,7 @@ function nextScene() {
 
   currentScene++
   if (currentScene >= activeFlow.length) {
-    renderStoryHub(app, openMonth, startExperience)
+    renderStoryHub(app, openMonth, startExperience, openDream)
     return
   }
   activeFlow[currentScene](app, nextScene, startExperience, openMonth)
@@ -184,6 +205,6 @@ function nextScene() {
 
 renderLanguage(app, () => {
   renderGate(app, () => {
-    renderStoryHub(app, openMonth, startExperience)
+    renderStoryHub(app, openMonth, startExperience, openDream)
   })
 })
